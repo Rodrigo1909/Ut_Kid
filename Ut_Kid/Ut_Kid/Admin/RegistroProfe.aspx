@@ -1,11 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegistroPadre.aspx.cs" Inherits="Ut_Kid.Padre.RegistroPadre" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegistroProfe.aspx.cs" Inherits="Ut_Kid.Admin.RegistroProfe" %>
 <asp:Content ID="head" ContentPlaceHolderID="Header" runat="server">
-    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="../Scripts/jquery-1.10.2.min.js"></script>
+     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-3.3.1.min.js"></script>
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
+    
       <div class="container">
         <%-- Direccion --%>
         <div class="panel panel-default">
@@ -67,7 +67,7 @@
                                                 </asp:TextBox>
                                                 <asp:RegularExpressionValidator ID="validarCodigo" runat="server" ControlToValidate="txtIntCodigo"
                                                     ErrorMessage="Ingrese solo numeros" ForeColor="Red" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
-                                  
+                                           
                                             </div>   
 
                                             <div class="form-group">
@@ -125,8 +125,6 @@
                                                     ErrorMessage="Ingrese solo numeros" ForeColor="Red" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
                                            
                                              </div>
-
-                                            
                                         </div>
                                      </div>
                                   </div>
@@ -135,7 +133,7 @@
                       </div>
             </div>
 
-        <%-- Padre --%>
+        <%-- Profesor --%>
         <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingOne">
                     <h4 class="panel-title">
@@ -148,7 +146,7 @@
                         <div class="row">
                             <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 
-                                <asp:Image ID="imgProveedor" runat="server" ImageUrl="~/Imagenes/Iconos/IconEdecanes.png"
+                                <asp:Image ID="imgProfe" runat="server" ImageUrl="~/Imagenes/Iconos/IconProfesor.jpg"
                                     CssClass="img-responsive img-rounded" />
 
                             </div>
@@ -210,6 +208,12 @@
                                                         CssClass="form-control input-sm" TextMode="Email" >
                                                 </asp:TextBox>
                                             </div>
+
+                                             <div class="form-group">
+                                                <label>Cedula: </label>
+                                                <asp:TextBox ID="txtCedula" runat="server" placeholder="Cedula" CssClass="form-control input-sm"  >
+                                                </asp:TextBox>
+                                            </div>
                                                                                                                                                          
                                             <hr />  
                                              <div class="form-group">
@@ -228,7 +232,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <div class="panel-title">
-                                                Registra tu Usuario y Constraseña
+                                                Registra el Usuario y Constraseña
                                             </div>
                                         </div>
                                         <div class="panel-body">
@@ -248,9 +252,9 @@
                                                         CssClass="form-control input-sm" TextMode="Password"></asp:TextBox>
                                                 </div>
                                                   <hr />
-
-                                            <a  href="../Login.aspx" class="nav-link" >
-                                                  <asp:Button ID="btnRegistrar" runat="server" Text="Registrar" CssClass="btn btn-block btn-sm btn-success" OnClick="btnRegistrarPadre_Click" />
+                                                                                                
+                                            <a  href="/InicioAdmin.aspx" class="nav-link" >
+                                                <asp:Button ID="btnRegistrar" runat="server" Text="Registrar" CssClass="btn btn-block btn-sm btn-success" OnClick="btnRegistrarProfe_Click" />
                                             </a>
                                             </div>
                                         </div>
