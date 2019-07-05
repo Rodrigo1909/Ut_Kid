@@ -32,7 +32,7 @@ namespace Ut_Kid.Admin
                 prof.strCorreo = txtCorreo.Text;
                 prof.strCedula = txtCedula.Text;
                 prof.bitFoto = path;
-                ControllerPofesor ctrlProfe = new ControllerPofesor();
+                ControllerProfesor ctrlProfe = new ControllerProfesor();
                 ctrlProfe.InsertarProfe(GetDatosVista(prof));
             }
 

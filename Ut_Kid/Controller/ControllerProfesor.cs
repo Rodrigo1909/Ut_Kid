@@ -9,7 +9,7 @@ using System.Linq.Expressions;
 
 namespace Controller
 {
-    class ControllerProfesor
+   public class ControllerProfesor
     {
         UtBaseDatoDataContext contexto = new UtBaseDatoDataContext();
         public bool InsertarProfe(TblProfesor _TBL_Profe)
