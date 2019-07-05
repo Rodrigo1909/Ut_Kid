@@ -1,0 +1,23 @@
+﻿body {
+    background-image: url('../Imagenes/Logo.jpeg');
+    background-size: cover;
+}
+
+.login-form {
+    margin-top: 200px;
+    box-shadow: 0px 0px 50px 1px grey;
+    border-radius: 10px;
+    padding: 10px;
+    background-image: url('../Imagenes/Panel.png');
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    text-align: left;
+}
+
+.title {
+    background: #1bf7a6;
+    padding: 10px;
+    text-align: center;
+    color: darkred;
+    border-radius: 0px 0px 8px 8px;
+}

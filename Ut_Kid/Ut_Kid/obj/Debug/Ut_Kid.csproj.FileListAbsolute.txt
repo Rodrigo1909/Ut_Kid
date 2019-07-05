@@ -64,3 +64,7 @@ C:\Users\RodrigoM\Desktop\Ut_Kid\Ut_Kid\Ut_Kid\bin\Microsoft.Owin.Security.OAuth
 C:\Users\RodrigoM\Desktop\Ut_Kid\Ut_Kid\Ut_Kid\obj\Debug\Ut_Kid.csprojResolveAssemblyReference.cache
 C:\Users\RodrigoM\Desktop\Ut_Kid\Ut_Kid\Ut_Kid\obj\Debug\Ut_Kid.dll
 C:\Users\RodrigoM\Desktop\Ut_Kid\Ut_Kid\Ut_Kid\obj\Debug\Ut_Kid.pdb
+C:\Users\RodrigoM\Desktop\Ut_Kid\Ut_Kid\Ut_Kid\bin\Controller.dll
+C:\Users\RodrigoM\Desktop\Ut_Kid\Ut_Kid\Ut_Kid\bin\Modelo.dll
+C:\Users\RodrigoM\Desktop\Ut_Kid\Ut_Kid\Ut_Kid\bin\Controller.pdb
+C:\Users\RodrigoM\Desktop\Ut_Kid\Ut_Kid\Ut_Kid\bin\Modelo.pdb
