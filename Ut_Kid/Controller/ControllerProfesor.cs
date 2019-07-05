@@ -17,7 +17,7 @@ namespace Controller
             bool respuesta = false;
             try
             {
-                contexto.TblProfesor.InsertOnSubmit(_TBL_Profe);
+                contexto.TblProfesors.InsertOnSubmit(_TBL_Profe);
                 contexto.SubmitChanges();
                 respuesta = true;
 

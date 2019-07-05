@@ -18,7 +18,7 @@ namespace Controller
             bool respuesta = false;
             try
             {
-                contexto.TblTaller.InsertOnSubmit(_TBL_Taller);
+                contexto.TblTallers.InsertOnSubmit(_TBL_Taller);
                 contexto.SubmitChanges();
                 respuesta = true;
 

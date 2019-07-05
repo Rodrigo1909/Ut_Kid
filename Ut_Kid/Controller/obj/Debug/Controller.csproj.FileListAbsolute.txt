@@ -5,3 +5,11 @@ C:\Users\RodrigoM\Desktop\Ut_Kid\Ut_Kid\Controller\bin\Debug\Modelo.pdb
 C:\Users\RodrigoM\Desktop\Ut_Kid\Ut_Kid\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
 C:\Users\RodrigoM\Desktop\Ut_Kid\Ut_Kid\Controller\obj\Debug\Controller.dll
 C:\Users\RodrigoM\Desktop\Ut_Kid\Ut_Kid\Controller\obj\Debug\Controller.pdb
+C:\Users\Luis Armando\Desktop\Ut_Kid\Ut_Kid\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+C:\Users\Luis Armando\Desktop\Ut_Kid\Ut_Kid\Controller\obj\Debug\Controller.dll
+C:\Users\Luis Armando\Desktop\Ut_Kid\Ut_Kid\Controller\obj\Debug\Controller.pdb
+C:\Users\Luis Armando\Desktop\Ut_Kid\Ut_Kid\Controller\bin\Debug\Controller.dll
+C:\Users\Luis Armando\Desktop\Ut_Kid\Ut_Kid\Controller\bin\Debug\Controller.pdb
+C:\Users\Luis Armando\Desktop\Ut_Kid\Ut_Kid\Controller\bin\Debug\Modelo.dll
+C:\Users\Luis Armando\Desktop\Ut_Kid\Ut_Kid\Controller\bin\Debug\Modelo.pdb
+C:\Users\Luis Armando\Desktop\Ut_Kid\Ut_Kid\Controller\bin\Debug\Modelo.dll.config
