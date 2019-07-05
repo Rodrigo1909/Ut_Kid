@@ -181,7 +181,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Imagenes\fondo3.jpg" />
+    <Content Include="Imagenes\Iconos\IconDireccion.png" />
+    <Content Include="Imagenes\Iconos\IconEdecanes.png" />
+    <Content Include="Imagenes\Iconos\IconProfesor.jpg" />
+    <Content Include="Imagenes\Iconos\IconTelefono.png" />
+    <Content Include="Imagenes\Logo.jpeg" />
+    <Content Include="Imagenes\Panel.png" />
     <Content Include="Login.aspx" />
+    <Content Include="Padre\RegistroPadre.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -371,6 +379,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Padre\RegistroPadre.aspx.cs">
+      <DependentUpon>RegistroPadre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Padre\RegistroPadre.aspx.designer.cs">
+      <DependentUpon>RegistroPadre.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -396,8 +411,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Admin\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Imagenes\Iconos\" />
+    <Folder Include="Imagenes\PadreRegistrado\" />
+    <Folder Include="Nino\" />
+    <Folder Include="Profe\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Controller\Controller.csproj">

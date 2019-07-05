@@ -48,7 +48,7 @@ namespace Ut_Kid
                 Session["user"] = usuario;
                 if (UsuarioLoggeado.strtipoUsuario == "PADRE")
                 {
-                    Response.Redirect("./Padre/InicioPadre.aspx", true);
+                    Response.Redirect("./Padre/RegistroPadre.aspx", true);
                 }
                 else if (UsuarioLoggeado.strtipoUsuario == "PROFESOR")
                 {
@@ -69,7 +69,7 @@ namespace Ut_Kid
 
         protected void btnRegistro_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/Registro/RegistroProfesor.aspx", true);
+            Response.Redirect("/Padre/RegistroPadre.aspx", true);
         }
     }
 }
