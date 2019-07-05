@@ -7,18 +7,13 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-            <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <a class="navbar-brand" runat="server" href="../Login.aspx">Salir</a>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="../Login.aspx">Salr</a>
+                    <a class="navbar-brand" runat="server" href="../Login.aspx">Salir</a>
                 </div>
             </div>
             </div>
-
-
 
       <div class="container">
         <%-- Direccion --%>

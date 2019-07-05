@@ -39,7 +39,7 @@ namespace Ut_Kid
             if (this.txtUser.Text.Equals("administrador") && this.txtPass.Text.Equals("1234"))
             {
                 Session["user"] = txtUser.Text;
-                this.Response.Redirect("./Administrador/InicioAdmin.aspx", true);
+                this.Response.Redirect("./Admin/InicioAdmin.aspx", true);
             }
             ControllerAutenticacion ctrlAutenticacion = new ControllerAutenticacion();
             TblUser UsuarioLoggeado = ctrlAutenticacion.ValidarLogin(usuario);

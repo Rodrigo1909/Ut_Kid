@@ -170,6 +170,8 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Admin\InicioAdmin.aspx" />
+    <Content Include="Admin\RegistrarTaller.aspx" />
     <Content Include="Admin\RegistroProfe.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
@@ -186,6 +188,7 @@
     <Content Include="Imagenes\Iconos\IconDireccion.png" />
     <Content Include="Imagenes\Iconos\IconEdecanes.png" />
     <Content Include="Imagenes\Iconos\IconProfesor.jpg" />
+    <Content Include="Imagenes\Iconos\IconTaller.png" />
     <Content Include="Imagenes\Iconos\IconTelefono.png" />
     <Content Include="Imagenes\Logo.jpeg" />
     <Content Include="Imagenes\Panel.png" />
@@ -343,6 +346,20 @@
     </Compile>
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\InicioAdmin.aspx.cs">
+      <DependentUpon>InicioAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\InicioAdmin.aspx.designer.cs">
+      <DependentUpon>InicioAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\RegistrarTaller.aspx.cs">
+      <DependentUpon>RegistrarTaller.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\RegistrarTaller.aspx.designer.cs">
+      <DependentUpon>RegistrarTaller.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\RegistroProfe.aspx.cs">
       <DependentUpon>RegistroProfe.aspx</DependentUpon>
