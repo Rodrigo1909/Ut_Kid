@@ -18,7 +18,7 @@ namespace Controller
             bool respuesta = false;
             try
             {
-                contexto.TblTallers.InsertOnSubmit(_TBL_Taller);
+                contexto.TblTaller.InsertOnSubmit(_TBL_Taller);
                 contexto.SubmitChanges();
                 respuesta = true;
 
@@ -30,6 +30,21 @@ namespace Controller
 
             }
             return respuesta;
+        }
+
+        public void Eliminar(int id)
+        {
+            TblTaller taller = contexto.TblTaller.Where(t => t.id == id).FirstOrDefault<TblTaller>();
+            contexto.TblTaller.DeleteOnSubmit(taller);
+            contexto.SubmitChanges();
+        }
+
+        public void Editar(TblTaller taller)
+        {
+            TblTaller tallerBd = contexto.TblTaller.Where(t => t.id == taller.id).FirstOrDefault<TblTaller>();
+            tallerBd.strNombre = taller.strNombre;
+            tallerBd.strDescripcion = taller.strDescripcion;
+            contexto.SubmitChanges();
         }
     }
 }

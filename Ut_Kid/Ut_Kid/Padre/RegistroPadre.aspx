@@ -13,7 +13,7 @@
                     <a class="navbar-brand" runat="server" href="../Login.aspx">Salir</a>
                 </div>
             </div>
-            </div>
+      </div>
 
       <div class="container">
         <%-- Direccion --%>

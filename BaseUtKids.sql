@@ -99,6 +99,25 @@ constraint fkIdUser_Profesor foreign key(idUser) references TblUser(id),
 constraint fkIdTaller_Profesor foreign key(idTaller) references TblTaller(id)
 );
 
+create table TblAsignacionProfesor(
+id int not null identity(1,1),
+idProfesor int,
+idTaller int,
+constraint pk_Asignacion primary key (Id),
+constraint fkIdProfesor_Asignacion foreign key(idProfesor) references TblProfesor(id),
+constraint fkIdTaller_Asignacion foreign key(idTaller) references TblTaller(id)
+);
+
+create table TblAsignacionNino(
+id int not null identity(1,1),
+idNino int,
+idAsignacionProfesor int,
+constraint pk_AsignacionNino primary key (Id),
+constraint fkIdNino_AsigNino foreign key(idNino) references TblNino(id),
+constraint fkIdAsignacionProfesor_AsigNino foreign key(idAsignacionProfesor) references TblAsignacionProfesor(id)
+);
+
+
 use ut_kids;
 select * from TblPadre;
 select * from TblDireccion;

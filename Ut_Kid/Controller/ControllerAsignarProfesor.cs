@@ -9,15 +9,26 @@ using System.Linq.Expressions;
 
 namespace Controller
 {
-    public class ControllerPadre
+    public class ControllerAsignarProfesor
     {
         UtBaseDatoDataContext contexto = new UtBaseDatoDataContext();
-        public bool InsertarPadre(TblPadre _TBL_Padre)
+
+        public List<TblProfesor> ConsultaProfesor()
+        {
+            return contexto.TblProfesor.ToList<TblProfesor>();
+        }
+
+        public List<TblTaller> ConsultaTaller()
+        {
+            return contexto.TblTaller.ToList<TblTaller>();
+        }
+
+        public bool InsertarAsigProfe(TblAsignacionProfesor _TBL_ASIGTALLLER)
         {
             bool respuesta = false;
             try
             {
-                contexto.TblPadre.InsertOnSubmit(_TBL_Padre);
+                contexto.TblAsignacionProfesor.InsertOnSubmit(_TBL_ASIGTALLLER);
                 contexto.SubmitChanges();
                 respuesta = true;
 
@@ -29,8 +40,7 @@ namespace Controller
 
             }
             return respuesta;
-
         }
+
     }
 }
-
