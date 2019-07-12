@@ -74,8 +74,7 @@ idUser	int,
 idTaller int,
 constraint pk_Nino primary key (Id),
 constraint fkIdPadre_Nino foreign key(idPadre) references TblPadre(id),
-constraint fkIdUser_Nino foreign key(idUser) references TblUser(id),
-constraint fkIdTaller_Nino foreign key(idTaller) references TblTaller(id)
+constraint fkIdUser_Nino foreign key(idUser) references TblUser(id)
 );
 
 create table TblProfesor(
@@ -124,3 +123,29 @@ select * from TblDireccion;
 select * from TblTelefono;
 select * from TblProfesor;
 select * from TblUser;
+select * from TblTaller;
+select * from TblAsignacionNino;
+select * from TblNino;
+
+
+/*Consulta para mostrar la asignacion de profesores*/
+  select  
+  AP.id,
+  P.strNombre as 'Nombre Profe',
+  T.strNombre as 'Nombre Taller'
+  from 
+  TblAsignacionProfesor as AP left join TblProfesor as P
+  ON AP.idProfesor = P.id
+  left join TblTaller as T
+  ON AP.idTaller = T.id 
+  group by P.strNombre, T.strNombre, AP.id;
+
+  /*Consulta para mostrar los hijos asignados de cada papá*/
+  select  
+  N.strNombre as 'Nombre Niño',
+  P.strNombre as 'Nombre Padre'
+  from 
+  TblNino as N left join TblPadre as P 
+  ON N.idPadre = P.id 
+  where  P.id = 1 
+  group by N.strNombre, P.strNombre;

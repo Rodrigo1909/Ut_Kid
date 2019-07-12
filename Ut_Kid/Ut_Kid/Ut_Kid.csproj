@@ -193,12 +193,14 @@
     <Content Include="Imagenes\Iconos\IconEditar.png" />
     <Content Include="Imagenes\Iconos\IconEliminar.png" />
     <Content Include="Imagenes\Iconos\IconGuardar.png" />
+    <Content Include="Imagenes\Iconos\IconHijo.png" />
     <Content Include="Imagenes\Iconos\IconProfesor.jpg" />
     <Content Include="Imagenes\Iconos\IconTaller.png" />
     <Content Include="Imagenes\Iconos\IconTelefono.png" />
     <Content Include="Imagenes\Logo.jpeg" />
     <Content Include="Imagenes\Panel.png" />
     <Content Include="Login.aspx" />
+    <Content Include="Padre\RegistrarHijo.aspx" />
     <Content Include="Padre\RegistroPadre.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -417,6 +419,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Padre\RegistrarHijo.aspx.cs">
+      <DependentUpon>RegistrarHijo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Padre\RegistrarHijo.aspx.designer.cs">
+      <DependentUpon>RegistrarHijo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Padre\RegistroPadre.aspx.cs">
       <DependentUpon>RegistroPadre.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

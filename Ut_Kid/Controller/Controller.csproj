@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="ControllerAsignarProfesor.cs" />
     <Compile Include="ControllerAutenticacion.cs" />
+    <Compile Include="ControllerHijo.cs" />
     <Compile Include="ControllerPadre.cs" />
     <Compile Include="ControllerProfesor.cs" />
     <Compile Include="ControllerTaller.cs" />

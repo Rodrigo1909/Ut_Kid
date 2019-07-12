@@ -85,21 +85,25 @@
         </div>
         <div id="collapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
             <div class="panel-body">
+
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="80%" DataSourceID="SqlDataSource1" AllowPaging="True" >
                     <Columns>
-                        <asp:CommandField ButtonType="Image" DeleteImageUrl="~/Imagenes/Iconos/IconEliminar.png" DeleteText="" 
-                            EditImageUrl="~/Imagenes/Iconos/IconEditar.png" EditText="" InsertText="" NewText="" 
-                            ShowEditButton="True" UpdateImageUrl="~/Imagenes/Iconos/IconGuardar.png" UpdateText="" 
-                            CancelImageUrl="~/Imagenes/Iconos/IconCancelar.png" CancelText="" ShowDeleteButton="True" />
+                        <asp:CommandField ButtonType="Image" 
+                                            DeleteImageUrl="~/Imagenes/Iconos/IconEliminar.png" 
+                                            EditImageUrl="~/Imagenes/Iconos/IconEditar.png"
+                                            ShowEditButton="True" UpdateImageUrl="~/Imagenes/Iconos/IconGuardar.png"  
+                                            CancelImageUrl="~/Imagenes/Iconos/IconCancelar.png"  
+                                            ShowDeleteButton="True" />
+                        <asp:BoundField DataField="id" HeaderText="Id"  SortExpression="id" />
                         <asp:BoundField DataField="strNombre" HeaderText="Nombre"  SortExpression="strNombre" />
                         <asp:BoundField DataField="strDescripcion" HeaderText="Descripción"  SortExpression="strDescripcion" />
                     </Columns>
                    <HeaderStyle BackColor="#ffcc00" ForeColor="White" Font-Size="18px" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ut_kidsConnectionString %>" 
-                    SelectCommand="SELECT strNombre, strDescripcion FROM TblTaller WHERE (strStatus = 1)"
-                    UpdateCommand="UPDATE TblTaller SET strNombre = @strNombre, strDescripcion = @strDescripcion WHERE id = @id"
-                    DeleteCommand="UPDATE TblTaller SET strStatus = 0 WHERE id = @id">
+                    SelectCommand="SELECT id, strNombre, strDescripcion FROM TblTaller WHERE (strStatus = 1)"
+                    UpdateCommand="UPDATE TblTaller SET strNombre = @strNombre, strDescripcion = @strDescripcion WHERE (id = @id)"
+                    DeleteCommand="UPDATE TblTaller SET strStatus = 0 WHERE (id = @id)">
                     <DeleteParameters>
                         <asp:Parameter Name="id" />
                         <asp:Parameter Name="strStatus" />

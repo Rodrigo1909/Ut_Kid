@@ -35,8 +35,7 @@ namespace Ut_Kid.Admin
                 ControllerProfesor ctrlProfe = new ControllerProfesor();
                 ctrlProfe.InsertarProfe(GetDatosVista(prof));
             }
-
-            this.Response.Redirect("./InicioAdmin.aspx", true);
+           this.Response.Redirect("./InicioAdmin.aspx", true);
         }
 
         protected TblProfesor GetDatosVista(TblProfesor prof)

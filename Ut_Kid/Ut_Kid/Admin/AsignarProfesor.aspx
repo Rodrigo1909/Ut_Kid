@@ -44,22 +44,15 @@
                         <div class="panel panel-default">
                             <div class="panel-body">
                                 <div class="form-inline">
-                                    <asp:DropDownList ID="ddlNombreProfesor" runat="server" AppendDataBoundItems="True" Height="50%" OnSelectedIndexChanged="ddlNombreProfesor_SelectedIndexChanged" DataSourceID="LinqDataSource1" DataTextField="strNombre" DataValueField="strNombre"></asp:DropDownList>
-                                    <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="Modelo.UtBaseDatoDataContext" EntityTypeName="" Select="new (strNombre, strApellidoP, strApellidoM)" TableName="TblProfesor">
-                                    </asp:LinqDataSource>
-                                    <asp:Label ID="lbProfe" runat="server" Text="Label" Visible="True"></asp:Label>
-                                </div>
+                                    <asp:Label ID="lbProfe" runat="server" Text="Seleccione el profesor a impartir el curso: " Visible="True"></asp:Label>
+                                    <asp:DropDownList ID="ddlNombreProfesor" runat="server" AppendDataBoundItems="True" Height="100%" ></asp:DropDownList>
+                                 </div>
 
                                 <br />
 
                                 <div class="form-inline">
-                                    <asp:DropDownList ID="ddlNombreTaller" runat="server" AppendDataBoundItems="True" DataTextField="strNombre" Height="50%" DataSourceID="LinqDataSource2" DataValueField="strNombre"></asp:DropDownList>
-                                    <asp:LinqDataSource ID="LinqDataSource2" runat="server" ContextTypeName="Modelo.UtBaseDatoDataContext" EntityTypeName="" Select="new (strNombre)" TableName="TblTaller" Where="strStatus == @strStatus">
-                                        <WhereParameters>
-                                            <asp:Parameter DefaultValue="1" Name="strStatus" Type="String" />
-                                        </WhereParameters>
-                                    </asp:LinqDataSource>
-                                    <asp:Label ID="lbTaller" runat="server" Text="Label" Visible="True"></asp:Label>
+                                    <asp:Label ID="lbTaller" runat="server" Text="Seleccione el taller a impartir: " Visible="True"></asp:Label>
+                                    <asp:DropDownList ID="ddlNombreTaller" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>      
                                 </div>
                                  <br />
 

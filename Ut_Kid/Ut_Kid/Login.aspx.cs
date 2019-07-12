@@ -11,6 +11,7 @@ namespace Ut_Kid
 {
     public partial class Login : System.Web.UI.Page
     {
+        private UtBaseDatoDataContext contexto = new UtBaseDatoDataContext();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -43,12 +44,13 @@ namespace Ut_Kid
             }
             ControllerAutenticacion ctrlAutenticacion = new ControllerAutenticacion();
             TblUser UsuarioLoggeado = ctrlAutenticacion.ValidarLogin(usuario);
+            var padre = (from pa in contexto.TblPadre where pa.idUser == UsuarioLoggeado.id select pa).FirstOrDefault();
             if (UsuarioLoggeado != null)
             {
-                Session["user"] = usuario;
+                Session["id"] = padre.id;
                 if (UsuarioLoggeado.strtipoUsuario == "PADRE")
                 {
-                    Response.Redirect("./Padre/RegistroPadre.aspx", true);
+                    Response.Redirect("./Padre/RegistrarHijo.aspx", true);
                 }
                 else if (UsuarioLoggeado.strtipoUsuario == "PROFESOR")
                 {

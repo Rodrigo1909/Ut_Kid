@@ -24,6 +24,7 @@ namespace Ut_Kid.Admin
             taller.strStatus = "1";
             ControllerTaller ctrlTall = new ControllerTaller();
             ctrlTall.InsertarTaller(taller);
+            this.Response.Redirect("./RegistrarTaller.aspx", true);
         }
     }
 }

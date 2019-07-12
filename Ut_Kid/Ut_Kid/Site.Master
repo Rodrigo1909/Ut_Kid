@@ -10,7 +10,7 @@
     <title><%: Page.Title %> Ut Kids</title>
 
     <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/bundles/modernizr") %>
+        
     </asp:PlaceHolder>
 
      <asp:ContentPlaceHolder ID="Header" runat="server">
