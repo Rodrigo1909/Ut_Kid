@@ -12,8 +12,8 @@
         <div class="container">
             <div class="navbar-header">
                    <a class="navbar-brand" runat="server" href="~/Admin/RegistroProfe.aspx" CssClass="btn btn-block btn-sm btn-success">Registrar Profesor</a>
-                   <a class="navbar-brand" runat="server" href="~/Admin/RegistrarTaller.aspx" CssClass="btn btn-block btn-sm btn-success">Registrar Taller</a>
-                   <a class="navbar-brand" runat="server" href="~/Admin/AsignarProfesor.aspx" CssClass="btn btn-block btn-sm btn-success">Asignar Taller</a>
+                   <a class="navbar-brand" runat="server" href="~/Admin/RegistrarTaller.aspx" CssClass="btn btn-block btn-sm btn-success">Registrar Grupo</a>
+                   <a class="navbar-brand" runat="server" href="~/Admin/AsignarProfesor.aspx" CssClass="btn btn-block btn-sm btn-success">Asignar Grupo</a>
                    <a class="navbar-brand" runat="server" href="../Login.aspx" CssClass="btn btn-block btn-sm btn-success">Salir</a>
             </div>
         </div>
@@ -51,7 +51,7 @@
                                 <br />
 
                                 <div class="form-inline">
-                                    <asp:Label ID="lbTaller" runat="server" Text="Seleccione el taller a impartir: " Visible="True"></asp:Label>
+                                    <asp:Label ID="lbTaller" runat="server" Text="Seleccione el grupo a impartir: " Visible="True"></asp:Label>
                                     <asp:DropDownList ID="ddlNombreTaller" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>      
                                 </div>
                                  <br />

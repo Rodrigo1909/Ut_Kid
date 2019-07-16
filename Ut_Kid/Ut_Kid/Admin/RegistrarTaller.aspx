@@ -12,17 +12,17 @@
         <div class="container">
             <div class="navbar-header">
                     <a class="navbar-brand" runat="server" href="~/Admin/RegistroProfe.aspx" CssClass="btn btn-block btn-sm btn-success">Registrar Profesor</a>
-                    <a class="navbar-brand" runat="server" href="~/Admin/RegistrarTaller.aspx" CssClass="btn btn-block btn-sm btn-success">Registrar Taller</a>
-                    <a class="navbar-brand" runat="server" href="~/Admin/AsignarProfesor.aspx" CssClass="btn btn-block btn-sm btn-success">Asignar Taller</a>
+                    <a class="navbar-brand" runat="server" href="~/Admin/RegistrarTaller.aspx" CssClass="btn btn-block btn-sm btn-success">Registrar Grupo</a>
+                    <a class="navbar-brand" runat="server" href="~/Admin/AsignarProfesor.aspx" CssClass="btn btn-block btn-sm btn-success">Asignar Grupo</a>
                     <a class="navbar-brand" runat="server" href="../Login.aspx" CssClass="btn btn-block btn-sm btn-success">Salir</a>
             </div>
         </div>
     </div>
-    <%-- Insertar Taller --%>
+    <%-- Insertar Grupo --%>
     <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="headingOne">
             <h4 class="panel-title">
-                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Registro de un taller
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Registro de un Grupo
                 </a>
             </h4>
         </div>
@@ -45,7 +45,7 @@
 
                                     <div class="form-group">
                                         <label>Nombre: </label>
-                                        <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control input-sm">
+                                        <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control input-xl">
                                         </asp:TextBox>
 
                                     </div>
@@ -75,11 +75,11 @@
         </div>
     </div>
 
-    <%-- Editar o eliminar Taller --%>
+    <%-- Editar o eliminar Grupo --%>
     <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="heading">
             <h4 class="panel-title">
-                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse" aria-expanded="false" aria-controls="collapse">Consultar Talleres
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse" aria-expanded="false" aria-controls="collapse">Consultar Grupos
                 </a>
             </h4>
         </div>
@@ -89,12 +89,11 @@
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="80%" DataSourceID="SqlDataSource1" AllowPaging="True" >
                     <Columns>
                         <asp:CommandField ButtonType="Image" 
-                                            DeleteImageUrl="~/Imagenes/Iconos/IconEliminar.png" 
-                                            EditImageUrl="~/Imagenes/Iconos/IconEditar.png"
-                                            ShowEditButton="True" UpdateImageUrl="~/Imagenes/Iconos/IconGuardar.png"  
-                                            CancelImageUrl="~/Imagenes/Iconos/IconCancelar.png"  
-                                            ShowDeleteButton="True" />
-                        <asp:BoundField DataField="id" HeaderText="Id"  SortExpression="id" />
+                                            DeleteImageUrl="~/Imagenes/Iconos/IconEliminar.png" ShowDeleteButton="True"
+                                            EditImageUrl="~/Imagenes/Iconos/IconEditar.png" ShowEditButton="True" 
+                                            UpdateImageUrl="~/Imagenes/Iconos/IconGuardar.png"  
+                                            CancelImageUrl="~/Imagenes/Iconos/IconCancelar.png"/>
+                        <asp:BoundField DataField="id" HeaderText="Codigo"  SortExpression="id" />
                         <asp:BoundField DataField="strNombre" HeaderText="Nombre"  SortExpression="strNombre" />
                         <asp:BoundField DataField="strDescripcion" HeaderText="Descripción"  SortExpression="strDescripcion" />
                     </Columns>
@@ -105,8 +104,8 @@
                     UpdateCommand="UPDATE TblTaller SET strNombre = @strNombre, strDescripcion = @strDescripcion WHERE (id = @id)"
                     DeleteCommand="UPDATE TblTaller SET strStatus = 0 WHERE (id = @id)">
                     <DeleteParameters>
-                        <asp:Parameter Name="id" />
                         <asp:Parameter Name="strStatus" />
+                        <asp:Parameter Name="id" />
                     </DeleteParameters>
                     <UpdateParameters>
                         <asp:Parameter Name="strNombre" />

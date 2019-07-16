@@ -11,6 +11,7 @@ namespace Ut_Kid.Padre
 {
     public partial class RegistroPadre : System.Web.UI.Page
     {
+        private UtBaseDatoDataContext contexto = new UtBaseDatoDataContext();
         protected void Page_Load(object sender, EventArgs e)
         {
 

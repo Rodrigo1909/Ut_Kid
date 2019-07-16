@@ -36,25 +36,36 @@
                                         <label>Nombre: </label>
                                         <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control input-sm">
                                         </asp:TextBox>
-
+                                        <asp:RegularExpressionValidator ID="validarNombre" runat="server" ControlToValidate="txtNombre"
+                                          ErrorMessage="Ingrese solo letras" ForeColor="Red" ValidationExpression="[A-Za-z]*$">
+                                        </asp:RegularExpressionValidator>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Apellido Paterno: </label>
                                         <asp:TextBox ID="txtApellidoP" runat="server" CssClass="form-control input-xl">
                                         </asp:TextBox>
+                                        <asp:RegularExpressionValidator ID="validarApellidoP" runat="server" ControlToValidate="txtApellidoP"
+                                           ErrorMessage="Ingrese solo letras" ForeColor="Red" ValidationExpression="[A-Za-z]*$">
+                                        </asp:RegularExpressionValidator>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Apellido Materno: </label>
                                         <asp:TextBox ID="txtApellidoM" runat="server" CssClass="form-control input-xl">
                                         </asp:TextBox>
+                                        <asp:RegularExpressionValidator ID="validarApellidoM" runat="server" ControlToValidate="txtApellidoM"
+                                            ErrorMessage="Ingrese solo letras" ForeColor="Red" ValidationExpression="[A-Za-z]*$">
+                                        </asp:RegularExpressionValidator>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Edad: </label>
                                         <asp:TextBox ID="txtEdad" runat="server" CssClass="form-control input-xl">
                                         </asp:TextBox>
+                                        <asp:RegularExpressionValidator ID="validarEdad" runat="server" ControlToValidate="txtEdad"
+                                                    ErrorMessage="Ingrese solo numeros" ForeColor="Red" ValidationExpression="^[0-9]*">
+                                        </asp:RegularExpressionValidator>
                                     </div>
 
                                     <div class="form-group">
@@ -126,55 +137,11 @@
         </div>
         <div id="collapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
             <div class="panel-body">
-
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="80%" DataSourceID="SqlDataSource1" AllowPaging="True" >
+                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="true" Width="100%" OnSelectedIndexChanged="GridView2_SelectedIndexChanged">
                     <Columns>
-                        <asp:CommandField ButtonType="Image" 
-                                            DeleteImageUrl="~/Imagenes/Iconos/IconEliminar.png" 
-                                            EditImageUrl="~/Imagenes/Iconos/IconEditar.png"
-                                            ShowEditButton="True" UpdateImageUrl="~/Imagenes/Iconos/IconGuardar.png"  
-                                            CancelImageUrl="~/Imagenes/Iconos/IconCancelar.png"  
-                                            ShowDeleteButton="True" />
-                        <asp:BoundField DataField="id" HeaderText="Id"  SortExpression="id" />
-                        <asp:BoundField DataField="strNombre" HeaderText="Nombre"  SortExpression="strNombre" />
-                        <asp:BoundField DataField="strDescripcion" HeaderText="Descripción"  SortExpression="strDescripcion" />
                     </Columns>
-                   <HeaderStyle BackColor="#ffcc00" ForeColor="White" Font-Size="18px" />
-                </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ut_kidsConnectionString %>" 
-                    SelectCommand="SELECT id, strNombre, strDescripcion FROM TblTaller WHERE (strStatus = 1)"
-                    UpdateCommand="UPDATE TblTaller SET strNombre = @strNombre, strDescripcion = @strDescripcion WHERE (id = @id)"
-                    DeleteCommand="UPDATE TblTaller SET strStatus = 0 WHERE (id = @id)">
-                    <DeleteParameters>
-                        <asp:Parameter Name="id" />
-                        <asp:Parameter Name="strStatus" />
-                    </DeleteParameters>
-                    <UpdateParameters>
-                        <asp:Parameter Name="strNombre" />
-                        <asp:Parameter Name="strDescripcion" />
-                        <asp:Parameter Name="id" />
-                    </UpdateParameters>
-
-                    
-                </asp:SqlDataSource>
-
-
-                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="LinqDataSource1">
-                    <Columns>
-                        <asp:BoundField DataField="strNombre" HeaderText="strNombre" ReadOnly="True" SortExpression="strNombre" />
-                        <asp:BoundField DataField="strApellidoP" HeaderText="strApellidoP" ReadOnly="True" SortExpression="strApellidoP" />
-                        <asp:BoundField DataField="strApellidoM" HeaderText="strApellidoM" ReadOnly="True" SortExpression="strApellidoM" />
-                        <asp:BoundField DataField="intEdad" HeaderText="intEdad" ReadOnly="True" SortExpression="intEdad" />
-                        <asp:BoundField DataField="strSexo" HeaderText="strSexo" ReadOnly="True" SortExpression="strSexo" />
-                        <asp:BoundField DataField="strAlergia" HeaderText="strAlergia" ReadOnly="True" SortExpression="strAlergia" />
-                        <asp:BoundField DataField="idPadre" HeaderText="idPadre" ReadOnly="True" SortExpression="idPadre" />
-                    </Columns>
-                </asp:GridView>
-                <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="Modelo.UtBaseDatoDataContext" EntityTypeName="" 
-                    Select="new (strNombre, strApellidoP, strApellidoM, intEdad, strSexo, strAlergia, idPadre)" TableName="TblNino">
-                </asp:LinqDataSource>
-
-
+                    <HeaderStyle BackColor="#ffcc00" ForeColor="White" Font-Size="18px" />
+                </asp:GridView>     
             </div>
         </div>
     </div>

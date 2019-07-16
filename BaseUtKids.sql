@@ -143,9 +143,19 @@ select * from TblNino;
   /*Consulta para mostrar los hijos asignados de cada papá*/
   select  
   N.strNombre as 'Nombre Niño',
-  P.strNombre as 'Nombre Padre'
+  N.strApellidoP as 'Apellido Paterno',
+  N.strApellidoM as 'Apellido Materno', 
+  N.intEdad as 'Edad',
+  N.strSexo as 'Sexo',
+  N.strAlergia as 'Alergias',
+  U.strusuario as 'Usuario',
+  U.strpass as 'Contraseña' 
   from 
   TblNino as N left join TblPadre as P 
   ON N.idPadre = P.id 
-  where  P.id = 1 
-  group by N.strNombre, P.strNombre;
+  left join TblUser as U
+  ON N.idUser = U.id
+  where  N.idPadre =  1
+  group by N.strNombre, N.strApellidoP,N.strApellidoM,
+  N.intEdad, N.strSexo, N.strAlergia, U.strusuario, U.strpass;
+

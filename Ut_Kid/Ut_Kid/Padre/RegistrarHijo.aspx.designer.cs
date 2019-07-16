@@ -31,6 +31,15 @@ namespace Ut_Kid.Padre {
         protected global::System.Web.UI.WebControls.TextBox txtNombre;
         
         /// <summary>
+        /// Control validarNombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator validarNombre;
+        
+        /// <summary>
         /// Control txtApellidoP.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace Ut_Kid.Padre {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtApellidoP;
+        
+        /// <summary>
+        /// Control validarApellidoP.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator validarApellidoP;
         
         /// <summary>
         /// Control txtApellidoM.
@@ -49,6 +67,15 @@ namespace Ut_Kid.Padre {
         protected global::System.Web.UI.WebControls.TextBox txtApellidoM;
         
         /// <summary>
+        /// Control validarApellidoM.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator validarApellidoM;
+        
+        /// <summary>
         /// Control txtEdad.
         /// </summary>
         /// <remarks>
@@ -56,6 +83,15 @@ namespace Ut_Kid.Padre {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEdad;
+        
+        /// <summary>
+        /// Control validarEdad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator validarEdad;
         
         /// <summary>
         /// Control txtSexo.
@@ -112,24 +148,6 @@ namespace Ut_Kid.Padre {
         protected global::System.Web.UI.WebControls.Button btnRegistrar;
         
         /// <summary>
-        /// Control GridView1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
-        
-        /// <summary>
-        /// Control SqlDataSource1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
-        
-        /// <summary>
         /// Control GridView2.
         /// </summary>
         /// <remarks>
@@ -137,14 +155,5 @@ namespace Ut_Kid.Padre {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView2;
-        
-        /// <summary>
-        /// Control LinqDataSource1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinqDataSource LinqDataSource1;
     }
 }

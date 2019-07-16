@@ -13,9 +13,15 @@ namespace Controller
     {
         UtBaseDatoDataContext contexto = new UtBaseDatoDataContext();
 
-        public List<TblProfesor> ConsultaProfesor()
+        public object ConsultaProfesor()
         {
-            return contexto.TblProfesor.ToList<TblProfesor>();
+            return contexto.TblProfesor
+                .Select(p => new
+                {
+                    id = p.id,
+                    strNombre = (p.strNombre + " " + p.strApellidoP + " " + p.strApellidoM).ToUpper()
+                })
+                .ToList();
         }
 
         public List<TblTaller> ConsultaTaller()
