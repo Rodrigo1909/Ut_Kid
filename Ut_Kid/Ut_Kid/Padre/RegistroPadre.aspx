@@ -247,13 +247,13 @@
                                                     <label>Nombre de Usuario: </label>
                                                     <asp:TextBox ID="txtUsuario" runat="server"
                                                         placeholder="Ejemplo" required="required"
-                                                        CssClass="form-control input-sm" ></asp:TextBox>
+                                                        CssClass="form-control input-sm"  ></asp:TextBox>
                                                 </div>
 
                                                 <div class="form-group">
                                                     <label>Contraseña: </label>
                                                     <asp:TextBox ID="txtPass" runat="server"
-                                                        placeholder="Contraseña: " required="required"
+                                                        placeholder="Contraseña" required="required"
                                                         CssClass="form-control input-sm" TextMode="Password"></asp:TextBox>
                                                 </div>
                                                   <hr />

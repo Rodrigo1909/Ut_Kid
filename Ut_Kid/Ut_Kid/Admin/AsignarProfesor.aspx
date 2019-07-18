@@ -68,4 +68,36 @@
             </div>
         </div>
     </div>
+
+    
+    <%-- Consultar Grupos asignados --%>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading">
+            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse" aria-expanded="false" aria-controls="collapse">Consultar Grupos
+                </a>
+            </h4>
+        </div>
+        <div id="collapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="80%">
+                    <Columns>
+                        <asp:BoundField DataField="Nombre del Profesor" HeaderText="Nombre del Profesor" ReadOnly="True" SortExpression="Nombre del Profesor" />
+                        <asp:BoundField DataField="Nombre del Grupo asignado" HeaderText="Nombre del Grupo asignado" SortExpression="Nombre del Grupo asignado" />
+                    </Columns>
+                    <HeaderStyle BackColor="#ffcc00" ForeColor="White" Font-Size="18px" />
+                </asp:GridView>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ut_kidsConnectionString %>" SelectCommand="  select  
+                (P.strNombre+ ' ' +  P.strApellidoP+ ' ' +p.strApellidoM) as 'Nombre del Profesor',
+                T.strNombre as 'Nombre del Grupo asignado'
+                from 
+                TblAsignacionProfesor as AP left join TblProfesor as P
+                ON AP.idProfesor = P.id
+                left join TblTaller as T
+                ON AP.idTaller = T.id 
+                group by P.strNombre, T.strNombre, P.strApellidoP, P.strApellidoM; 
+                "></asp:SqlDataSource>
+             </div>
+        </div>
+    </div>
 </asp:Content>

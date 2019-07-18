@@ -24,24 +24,32 @@ namespace Ut_Kid.Padre
 
         protected void btnRegistrarPadre_Click(object sender, EventArgs e)
         {
-            if (FotoPerfil.HasFile)
-            {
-                string path = Server.MapPath("~/Imagenes/PadreRegistrado/" + FotoPerfil.FileName);
-                FotoPerfil.SaveAs(path);
+            var exite = (from pa in contexto.TblUser where pa.strusuario == txtUsuario.Text select pa).FirstOrDefault();
+            
 
-                TblPadre pad = new TblPadre();
-                pad.strNombre = txtNombre.Text.ToUpper();
-                pad.strApellidoP = txtAPaterno.Text.ToUpper();
-                pad.strApellidoM = txtAMaterno.Text.ToUpper();
-                pad.intEdad = Int32.Parse(txtEdad.Text);
-                pad.strSexo = txtSexo.Text.ToUpper();
-                pad.strCorreo = txtCorreo.Text;
-                pad.bitFoto = path;
-                ControllerPadre ctrlPadre = new ControllerPadre();
-                ctrlPadre.InsertarPadre(GetDatosVista(pad));
-            }
+            if (exite != null)
+            { 
+                    if (FotoPerfil.HasFile)
+                    {
+                        string path = Server.MapPath("~/Imagenes/PadreRegistrado/" + FotoPerfil.FileName);
+                        FotoPerfil.SaveAs(path);
 
-            this.Response.Redirect("../Login.aspx", true);
+                        TblPadre pad = new TblPadre();
+                        pad.strNombre = txtNombre.Text.ToUpper();
+                        pad.strApellidoP = txtAPaterno.Text.ToUpper();
+                        pad.strApellidoM = txtAMaterno.Text.ToUpper();
+                        pad.intEdad = Int32.Parse(txtEdad.Text);
+                        pad.strSexo = txtSexo.Text.ToUpper();
+                        pad.strCorreo = txtCorreo.Text;
+                        pad.bitFoto = path;
+                        ControllerPadre ctrlPadre = new ControllerPadre();
+                        ctrlPadre.InsertarPadre(GetDatosVista(pad));
+                    }
+
+                    this.Response.Redirect("../Login.aspx", true);
+                }
+            this.Response.Redirect("./RegistroPadre.aspx", true);
+            Console.Write("Ya existe este usuario");
         }
 
         protected TblPadre GetDatosVista(TblPadre padre)

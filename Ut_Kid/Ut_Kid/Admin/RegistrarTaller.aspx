@@ -86,14 +86,13 @@
         <div id="collapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
             <div class="panel-body">
 
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="80%" DataSourceID="SqlDataSource1" AllowPaging="True" >
+               <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="80%" DataSourceID="SqlDataSource1" AllowPaging="True"  DataKeyNames="id" >
                     <Columns>
                         <asp:CommandField ButtonType="Image" 
                                             DeleteImageUrl="~/Imagenes/Iconos/IconEliminar.png" ShowDeleteButton="True"
                                             EditImageUrl="~/Imagenes/Iconos/IconEditar.png" ShowEditButton="True" 
                                             UpdateImageUrl="~/Imagenes/Iconos/IconGuardar.png"  
                                             CancelImageUrl="~/Imagenes/Iconos/IconCancelar.png"/>
-                        <asp:BoundField DataField="id" HeaderText="Codigo"  SortExpression="id" />
                         <asp:BoundField DataField="strNombre" HeaderText="Nombre"  SortExpression="strNombre" />
                         <asp:BoundField DataField="strDescripcion" HeaderText="Descripción"  SortExpression="strDescripcion" />
                     </Columns>
@@ -102,7 +101,7 @@
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ut_kidsConnectionString %>" 
                     SelectCommand="SELECT id, strNombre, strDescripcion FROM TblTaller WHERE (strStatus = 1)"
                     UpdateCommand="UPDATE TblTaller SET strNombre = @strNombre, strDescripcion = @strDescripcion WHERE (id = @id)"
-                    DeleteCommand="UPDATE TblTaller SET strStatus = 0 WHERE (id = @id)">
+                    DeleteCommand="UPDATE TblTaller SET strStatus = '0' WHERE (id = @id)">
                     <DeleteParameters>
                         <asp:Parameter Name="strStatus" />
                         <asp:Parameter Name="id" />
@@ -115,6 +114,8 @@
 
                     
                 </asp:SqlDataSource>
+
+
 
 
             </div>

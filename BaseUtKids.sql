@@ -130,15 +130,14 @@ select * from TblNino;
 
 /*Consulta para mostrar la asignacion de profesores*/
   select  
-  AP.id,
-  P.strNombre as 'Nombre Profe',
+  (P.strNombre+ ' ' + P.strApellidoP+ p.strApellidoM) as 'Nombre Profe',
   T.strNombre as 'Nombre Taller'
   from 
   TblAsignacionProfesor as AP left join TblProfesor as P
   ON AP.idProfesor = P.id
   left join TblTaller as T
   ON AP.idTaller = T.id 
-  group by P.strNombre, T.strNombre, AP.id;
+  group by P.strNombre, T.strNombre, P.strApellidoP, P.strApellidoM;
 
   /*Consulta para mostrar los hijos asignados de cada papá*/
   select  
@@ -159,3 +158,7 @@ select * from TblNino;
   group by N.strNombre, N.strApellidoP,N.strApellidoM,
   N.intEdad, N.strSexo, N.strAlergia, U.strusuario, U.strpass;
 
+  select * from TblUser where strusuario like 'RodrigoM'
+
+
+  

@@ -58,7 +58,6 @@ namespace Ut_Kid.Padre
 
         protected void btnRegistarHijo(object sender, EventArgs e)
         {
-
             TblNino nino = new TblNino();
             nino.strNombre = txtNombre.Text.ToUpper();
             nino.strApellidoP = txtApellidoP.Text.ToUpper();
