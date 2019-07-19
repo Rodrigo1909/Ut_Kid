@@ -5,21 +5,32 @@
     <script src="../Scripts/jquery-1.10.2.min.js"></script>
 </asp:Content>
 
-
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+<asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
+ <header>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
             <div class="navbar-header">
-                   <a class="navbar-brand" runat="server" href="~/Admin/RegistroProfe.aspx" CssClass="btn btn-block btn-sm btn-success">Registrar Profesor</a>
-                   <a class="navbar-brand" runat="server" href="~/Admin/RegistrarTaller.aspx" CssClass="btn btn-block btn-sm btn-success">Registrar Grupo</a>
-                   <a class="navbar-brand" runat="server" href="~/Admin/AsignarProfesor.aspx" CssClass="btn btn-block btn-sm btn-success">Asignar Grupo</a>
-                   <a class="navbar-brand" runat="server" href="../Login.aspx" CssClass="btn btn-block btn-sm btn-success">Salir</a>
+                <a class="navbar-brand" style="color: white" href="../Login.aspx">Salir</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="RegistroProfe.aspx" style="color: white">Registrar Profesor</a></li>
+                    <li><a href="RegistrarTaller.aspx" style="color: white">Registrar Grupo</a></li>
+                    <li><a href="AsignarProfesor.aspx" style="color: white">Asignar Grupo</a></li>
+                </ul>
             </div>
         </div>
-    </div>
+    </nav>
+</header>
 
-    
+</asp:Content>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<br />
+<br />
+<br />
+<br />    
+     <div class="container">
     <%-- Asignar profesor al curso --%>
     <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="headingOne">
@@ -44,14 +55,14 @@
                         <div class="panel panel-default">
                             <div class="panel-body">
                                 <div class="form-inline">
-                                    <asp:Label ID="lbProfe" runat="server" Text="Seleccione el profesor a impartir el curso: " Visible="True"></asp:Label>
+                                    <asp:Label ID="lbProfe" runat="server" Text="Seleccione el profesor a impartir el curso: " Visible="True" Font-Size="16px"></asp:Label>
                                     <asp:DropDownList ID="ddlNombreProfesor" runat="server" AppendDataBoundItems="True" Height="100%" ></asp:DropDownList>
                                  </div>
 
                                 <br />
 
                                 <div class="form-inline">
-                                    <asp:Label ID="lbTaller" runat="server" Text="Seleccione el grupo a impartir: " Visible="True"></asp:Label>
+                                    <asp:Label ID="lbTaller" runat="server" Text="Seleccione el grupo a impartir: " Visible="True" Font-Size="16px"></asp:Label>
                                     <asp:DropDownList ID="ddlNombreTaller" runat="server" AppendDataBoundItems="True"  Height="100%" ></asp:DropDownList>      
                                 </div>
                                  <br />
@@ -68,8 +79,7 @@
             </div>
         </div>
     </div>
-
-    
+   
     <%-- Consultar Grupos asignados --%>
     <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="heading">
@@ -99,5 +109,6 @@
                 "></asp:SqlDataSource>
              </div>
         </div>
+    </div>
     </div>
 </asp:Content>

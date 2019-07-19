@@ -5,8 +5,24 @@
     <script src="../Scripts/jquery-1.10.2.min.js"></script>
 </asp:Content>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
+<asp:Content ID="Content1" ContentPlaceHolderID="FeaturedContent" runat="server">
+<header>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" style="color: white" href="../Login.aspx">Salir</a>
+            </div>
+        </div>
+    </nav>
+</header>
+</asp:Content>
+
+<asp:Content ID="Header" ContentPlaceHolderID="MainContent" runat="server">
+<br />
+<br />
+<br />
+<br />
     <%-- Insertar Hijo --%>
     <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="headingOne">
