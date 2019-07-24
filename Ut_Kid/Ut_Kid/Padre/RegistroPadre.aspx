@@ -2,10 +2,20 @@
 <asp:Content ID="head" ContentPlaceHolderID="Header" runat="server">
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
     <script src="../Scripts/jquery-1.10.2.min.js"></script>
+    <style type="text/css">
+        .auto-style1 {
+            width: 560px;
+            height: 315px;
+        }
+        .auto-style2 {
+            width: 514px;
+            height: 315px;
+        }
+    </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
-<header>
+    <header>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -18,7 +28,7 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-<br />
+    <br />
 <br />
 <br />
 <br />
@@ -148,7 +158,10 @@
                                 </div>
                             </div>
                         </div>
+                         <img alt="" class="auto-style1" src="../Imagenes/tata.png" /><img alt="" class="auto-style1" src="../Imagenes/rere.png" /></div>
+                        
                     </div>
+    <%--    webservice.js--%>
                 </div>
     </div>
 
@@ -277,8 +290,8 @@
                 </div>
             </div>
         </div>
-    </div>
-
+        <img class="auto-style1" src="../Imagenes/ERE.png" /><img alt="" class="auto-style1" src="../Imagenes/Facil.png" /></div>
+<%--    webservice.js--%>
 </div>
 </asp:Content>
 

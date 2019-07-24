@@ -1,10 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ut_kids" Class="UtBaseDatoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=RODRIGO;Initial Catalog=ut_kids;Persist Security Info=True;User ID=sa" SettingsObjectName="Modelo.Properties.Settings" SettingsPropertyName="ut_kidsConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-NSTQMVQ\IARSERVER;Initial Catalog=ut_kids;Integrated Security=True" SettingsObjectName="Modelo.Properties.Settings" SettingsPropertyName="ut_kidsConnectionString3" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TblAsignacionNino" Member="TblAsignacionNino">
+    <Type Name="TblAsignacionNino">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idNino" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idAsignacionProfesor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TblAsignacionProfesor_TblAsignacionNino" Member="TblAsignacionProfesor" ThisKey="idAsignacionProfesor" OtherKey="id" Type="TblAsignacionProfesor" IsForeignKey="true" />
+      <Association Name="TblNino_TblAsignacionNino" Member="TblNino" ThisKey="idNino" OtherKey="id" Type="TblNino" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.TblAsignacionProfesor" Member="TblAsignacionProfesor">
     <Type Name="TblAsignacionProfesor">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="idProfesor" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="idTaller" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TblAsignacionProfesor_TblAsignacionNino" Member="TblAsignacionNino" ThisKey="id" OtherKey="idAsignacionProfesor" Type="TblAsignacionNino" />
       <Association Name="TblProfesor_TblAsignacionProfesor" Member="TblProfesor" ThisKey="idProfesor" OtherKey="id" Type="TblProfesor" IsForeignKey="true" />
       <Association Name="TblTaller_TblAsignacionProfesor" Member="TblTaller" ThisKey="idTaller" OtherKey="id" Type="TblTaller" IsForeignKey="true" />
     </Type>
@@ -36,8 +46,8 @@
       <Column Name="idPadre" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="idUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="idTaller" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TblNino_TblAsignacionNino" Member="TblAsignacionNino" ThisKey="id" OtherKey="idNino" Type="TblAsignacionNino" />
       <Association Name="TblPadre_TblNino" Member="TblPadre" ThisKey="idPadre" OtherKey="id" Type="TblPadre" IsForeignKey="true" />
-      <Association Name="TblTaller_TblNino" Member="TblTaller" ThisKey="idTaller" OtherKey="id" Type="TblTaller" IsForeignKey="true" />
       <Association Name="TblUser_TblNino" Member="TblUser" ThisKey="idUser" OtherKey="id" Type="TblUser" IsForeignKey="true" />
     </Type>
   </Table>
@@ -45,11 +55,11 @@
     <Type Name="TblPadre">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="strNombre" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Column Name="strApellidoP" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="strApellidoM" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strApellidoP" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="strApellidoM" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
       <Column Name="intEdad" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="strSexo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="strCorreo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strCorreo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
       <Column Name="bitFoto" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="idDireccion" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="idTelefono" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -89,7 +99,6 @@
       <Column Name="strDescripcion" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
       <Column Name="strStatus" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="TblTaller_TblAsignacionProfesor" Member="TblAsignacionProfesor" ThisKey="id" OtherKey="idTaller" Type="TblAsignacionProfesor" />
-      <Association Name="TblTaller_TblNino" Member="TblNino" ThisKey="id" OtherKey="idTaller" Type="TblNino" />
       <Association Name="TblTaller_TblProfesor" Member="TblProfesor" ThisKey="id" OtherKey="idTaller" Type="TblProfesor" />
     </Type>
   </Table>

@@ -3,11 +3,17 @@
 <asp:Content ID="head" ContentPlaceHolderID="Header" runat="server">
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
     <script src="../Scripts/jquery-1.10.2.min.js"></script>
+    <style type="text/css">
+        .auto-style1 {
+            width: 560px;
+            height: 315px;
+        }
+    </style>
 </asp:Content>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="FeaturedContent" runat="server">
-<header>
+    <header>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -19,7 +25,7 @@
 </asp:Content>
 
 <asp:Content ID="Header" ContentPlaceHolderID="MainContent" runat="server">
-<br />
+    <br />
 <br />
 <br />
 <br />
@@ -138,7 +144,7 @@
                                     </div>                                    
                                 </div>
                             </div>
-                </div>
+                                <center><img class="auto-style1" src="../Imagenes/RestaFacil.png" /></div></center>    
             </div>
         </div>
     </div>

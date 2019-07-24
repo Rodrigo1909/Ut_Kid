@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -186,6 +187,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Imagenes\A.png" />
+    <Content Include="Imagenes\B.png" />
+    <Content Include="Imagenes\c.png" />
+    <Content Include="Imagenes\D.png" />
     <Content Include="Imagenes\fondo3.jpg" />
     <Content Include="Imagenes\Iconos\IconCancelar.png" />
     <Content Include="Imagenes\Iconos\IconDireccion.png" />
