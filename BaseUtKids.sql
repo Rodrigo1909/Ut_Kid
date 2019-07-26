@@ -74,7 +74,8 @@ idUser	int,
 idTaller int,
 constraint pk_Nino primary key (Id),
 constraint fkIdPadre_Nino foreign key(idPadre) references TblPadre(id),
-constraint fkIdUser_Nino foreign key(idUser) references TblUser(id)
+constraint fkIdUser_Nino foreign key(idUser) references TblUser(id),
+constraint fkIdTaller_Nino foreign key(idTaller) references TblTaller(id)
 );
 
 create table TblProfesor(
@@ -116,6 +117,22 @@ constraint fkIdNino_AsigNino foreign key(idNino) references TblNino(id),
 constraint fkIdAsignacionProfesor_AsigNino foreign key(idAsignacionProfesor) references TblAsignacionProfesor(id)
 );
 
+create table TblModederoNino(
+id int not null identity(1,1),
+idNino int,
+cantidad decimal(10,2),
+constraint pk_Monedero primary key (Id),
+constraint fkIdModenero_Nino foreign key(idNino) references TblNino(id)
+);
+
+create table TblActividadTaller(
+id int not null identity(1,1),
+idTaller int,
+strvalor varchar(70),
+strdescripcion varchar(100),
+constraint pk_AactividadTaller primary key (Id),
+constraint fkIdTaller_ActividadTaller foreign key(idTaller) references TblTaller(id)
+);
 
 use ut_kids;
 select * from TblPadre;
@@ -123,42 +140,3 @@ select * from TblDireccion;
 select * from TblTelefono;
 select * from TblProfesor;
 select * from TblUser;
-select * from TblTaller;
-select * from TblAsignacionNino;
-select * from TblNino;
-
-
-/*Consulta para mostrar la asignacion de profesores*/
-  select  
-  (P.strNombre+ ' ' + P.strApellidoP+ p.strApellidoM) as 'Nombre Profe',
-  T.strNombre as 'Nombre Taller'
-  from 
-  TblAsignacionProfesor as AP left join TblProfesor as P
-  ON AP.idProfesor = P.id
-  left join TblTaller as T
-  ON AP.idTaller = T.id 
-  group by P.strNombre, T.strNombre, P.strApellidoP, P.strApellidoM;
-
-  /*Consulta para mostrar los hijos asignados de cada papá*/
-  select  
-  N.strNombre as 'Nombre Niño',
-  N.strApellidoP as 'Apellido Paterno',
-  N.strApellidoM as 'Apellido Materno', 
-  N.intEdad as 'Edad',
-  N.strSexo as 'Sexo',
-  N.strAlergia as 'Alergias',
-  U.strusuario as 'Usuario',
-  U.strpass as 'Contraseña' 
-  from 
-  TblNino as N left join TblPadre as P 
-  ON N.idPadre = P.id 
-  left join TblUser as U
-  ON N.idUser = U.id
-  where  N.idPadre =  1
-  group by N.strNombre, N.strApellidoP,N.strApellidoM,
-  N.intEdad, N.strSexo, N.strAlergia, U.strusuario, U.strpass;
-
-  select * from TblUser where strusuario like 'RodrigoM'
-
-
-  

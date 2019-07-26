@@ -186,6 +186,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <Content Include="NinoPrincipal.Master" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Imagenes\A.png" />
     <Content Include="Imagenes\B.png" />
@@ -204,7 +205,10 @@
     <Content Include="Imagenes\Iconos\IconTelefono.png" />
     <Content Include="Imagenes\Logo.jpeg" />
     <Content Include="Imagenes\Panel.png" />
+    <Content Include="img\logoo.jpg" />
     <Content Include="Login.aspx" />
+    <Content Include="Nino\InicioNino.aspx" />
+    <Content Include="Nino\PrincipalNino.aspx" />
     <Content Include="Padre\RegistrarHijo.aspx" />
     <Content Include="Padre\RegistroPadre.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -424,6 +428,27 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="NinoPrincipal.Master.cs">
+      <DependentUpon>NinoPrincipal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NinoPrincipal.Master.designer.cs">
+      <DependentUpon>NinoPrincipal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Nino\InicioNino.aspx.cs">
+      <DependentUpon>InicioNino.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nino\InicioNino.aspx.designer.cs">
+      <DependentUpon>InicioNino.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nino\PrincipalNino.aspx.cs">
+      <DependentUpon>PrincipalNino.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nino\PrincipalNino.aspx.designer.cs">
+      <DependentUpon>PrincipalNino.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Padre\RegistrarHijo.aspx.cs">
       <DependentUpon>RegistrarHijo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -466,7 +491,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Imagenes\PadreRegistrado\" />
     <Folder Include="Imagenes\ProfeRegistrado\" />
-    <Folder Include="Nino\" />
     <Folder Include="Profe\" />
   </ItemGroup>
   <ItemGroup>

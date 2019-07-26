@@ -23,3 +23,13 @@ C:\Users\itzel\Desktop\9°\Hugo\Ut_kid\Ut_Kid\Controller\obj\Debug\Controller.cs
 C:\Users\itzel\Desktop\9°\Hugo\Ut_kid\Ut_Kid\Controller\obj\Debug\Controller.csproj.CopyComplete
 C:\Users\itzel\Desktop\9°\Hugo\Ut_kid\Ut_Kid\Controller\obj\Debug\Controller.dll
 C:\Users\itzel\Desktop\9°\Hugo\Ut_kid\Ut_Kid\Controller\obj\Debug\Controller.pdb
+C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Controller\bin\Debug\Controller.dll
+C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Controller\bin\Debug\Controller.pdb
+C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Controller\bin\Debug\Modelo.dll
+C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Controller\bin\Debug\Modelo.pdb
+C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Controller\bin\Debug\Modelo.dll.config
+C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Controller\obj\Debug\Controller.csprojAssemblyReference.cache
+C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Controller\obj\Debug\Controller.csproj.CoreCompileInputs.cache
+C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Controller\obj\Debug\Controller.csproj.CopyComplete
+C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Controller\obj\Debug\Controller.dll
+C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Controller\obj\Debug\Controller.pdb

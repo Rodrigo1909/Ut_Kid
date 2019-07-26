@@ -17,3 +17,10 @@ C:\Users\itzel\Desktop\9°\Hugo\Ut_kid\Ut_Kid\Modelo\obj\Debug\Modelo.csprojAsse
 C:\Users\itzel\Desktop\9°\Hugo\Ut_kid\Ut_Kid\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
 C:\Users\itzel\Desktop\9°\Hugo\Ut_kid\Ut_Kid\Modelo\obj\Debug\Modelo.dll
 C:\Users\itzel\Desktop\9°\Hugo\Ut_kid\Ut_Kid\Modelo\obj\Debug\Modelo.pdb
+C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Modelo\bin\Debug\Modelo.dll
+C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Modelo\bin\Debug\Modelo.pdb
+C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Modelo\obj\Debug\Modelo.dll
+C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Modelo\obj\Debug\Modelo.pdb

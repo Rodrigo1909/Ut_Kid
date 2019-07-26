@@ -44,9 +44,12 @@ namespace Ut_Kid
             ControllerAutenticacion ctrlAutenticacion = new ControllerAutenticacion();
             TblUser UsuarioLoggeado = ctrlAutenticacion.ValidarLogin(usuario);
             var padre = (from pa in contexto.TblPadre where pa.idUser == UsuarioLoggeado.id select pa).FirstOrDefault();
+           
             if (UsuarioLoggeado != null)
             {
-                Session["id"] = padre.id;
+              // Session["id"] = padre.id;
+              
+          
                 if (UsuarioLoggeado.strtipoUsuario == "PADRE")
                 {
                     Response.Redirect("./Padre/RegistrarHijo.aspx", true);
@@ -56,8 +59,10 @@ namespace Ut_Kid
                     Response.Redirect("./Profesor/InicioProfesor.aspx", true);
                 }
                 else if (UsuarioLoggeado.strtipoUsuario == "NINO")
+
                 {
-                    Response.Redirect("./Nino/InicioNino.aspx", true);
+                    Session["nino"] = UsuarioLoggeado.strusuario;
+                    Response.Redirect("Nino/InicioNino.aspx", true);
                 }
             }
             else
