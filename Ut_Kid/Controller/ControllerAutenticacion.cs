@@ -18,7 +18,7 @@ namespace Controller
             Expression<Func<TblUser, bool>> predicado = p => p.strusuario == _user.strusuario && p.strpass == _user.strpass;
             try
             {
-                TblUser user = contexto.TblUser.Where(predicado).FirstOrDefault<TblUser>();
+                TblUser user = contexto.TblUsers.Where(predicado).FirstOrDefault<TblUser>();
                 if (user != null)
                 {
 

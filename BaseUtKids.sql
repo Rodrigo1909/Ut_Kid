@@ -116,6 +116,22 @@ constraint fkIdNino_AsigNino foreign key(idNino) references TblNino(id),
 constraint fkIdAsignacionProfesor_AsigNino foreign key(idAsignacionProfesor) references TblAsignacionProfesor(id)
 );
 
+create table TblModederoNino(
+id int not null identity(1,1),
+idNino int,
+cantidad decimal(10,2) not null,
+constraint pk_Monedero primary key (Id),
+constraint fkIdModenero_Nino foreign key(idNino) references TblNino(id)
+);
+
+create table TblActividadTaller(
+id int not null identity(1,1),
+idTaller int,
+strvalor varchar(70) not null,
+strdescripcion varchar(100),
+constraint pk_AactividadTaller primary key (Id),
+constraint fkIdTaller_ActividadTaller foreign key(idTaller) references TblTaller(id)
+);
 
 use ut_kids;
 select * from TblPadre;

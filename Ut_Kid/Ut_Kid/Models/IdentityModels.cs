@@ -38,6 +38,8 @@ namespace Ut_Kid.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Modelo.TblActividadTaller> TblActividadTallers { get; set; }
     }
 }
 
