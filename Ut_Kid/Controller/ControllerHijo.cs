@@ -17,7 +17,7 @@ namespace Controller
             bool respuesta = false;
             try
             {
-                contexto.TblNino.InsertOnSubmit(_TBL_Hijo);
+                contexto.TblNinos.InsertOnSubmit(_TBL_Hijo);
                 contexto.SubmitChanges();
                 respuesta = true;
 
