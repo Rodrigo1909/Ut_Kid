@@ -43,8 +43,9 @@ namespace Ut_Kid
             }
             ControllerAutenticacion ctrlAutenticacion = new ControllerAutenticacion();
             TblUser UsuarioLoggeado = ctrlAutenticacion.ValidarLogin(usuario);
-            var padre = (from pa in contexto.TblPadre where pa.idUser == UsuarioLoggeado.id select pa).FirstOrDefault();
-           
+            var padre = (from pa in contexto.TblPadres where pa.idUser == UsuarioLoggeado.id select pa).FirstOrDefault();
+            var profe = (from pa in contexto.TblProfesors where pa.idUser == UsuarioLoggeado.id select pa).FirstOrDefault();
+            var nino = (from pa in contexto.TblNinos where pa.idUser == UsuarioLoggeado.id select pa).FirstOrDefault();
             if (UsuarioLoggeado != null)
             {
               // Session["id"] = padre.id;
@@ -56,10 +57,10 @@ namespace Ut_Kid
                 }
                 else if (UsuarioLoggeado.strtipoUsuario == "PROFESOR")
                 {
-                    Response.Redirect("./Profesor/InicioProfesor.aspx", true);
+                    Session["id"] = profe.id;
+                    Response.Redirect("./Profe/Inicio.aspx", true);
                 }
                 else if (UsuarioLoggeado.strtipoUsuario == "NINO")
-
                 {
                     Session["nino"] = UsuarioLoggeado.strusuario;
                     Response.Redirect("Nino/InicioNino.aspx", true);

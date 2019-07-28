@@ -211,6 +211,10 @@
     <Content Include="Nino\PrincipalNino.aspx" />
     <Content Include="Padre\RegistrarHijo.aspx" />
     <Content Include="Padre\RegistroPadre.aspx" />
+    <Content Include="Profe\Actividad.aspx" />
+    <Content Include="Profe\Cobrar.aspx" />
+    <Content Include="Profe\Inicio.aspx" />
+    <Content Include="Profe\Premiar.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -463,6 +467,34 @@
     <Compile Include="Padre\RegistroPadre.aspx.designer.cs">
       <DependentUpon>RegistroPadre.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Profe\Actividad.aspx.cs">
+      <DependentUpon>Actividad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profe\Actividad.aspx.designer.cs">
+      <DependentUpon>Actividad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profe\Cobrar.aspx.cs">
+      <DependentUpon>Cobrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profe\Cobrar.aspx.designer.cs">
+      <DependentUpon>Cobrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profe\Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profe\Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profe\Premiar.aspx.cs">
+      <DependentUpon>Premiar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profe\Premiar.aspx.designer.cs">
+      <DependentUpon>Premiar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -491,7 +523,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Imagenes\PadreRegistrado\" />
     <Folder Include="Imagenes\ProfeRegistrado\" />
-    <Folder Include="Profe\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Controller\Controller.csproj">

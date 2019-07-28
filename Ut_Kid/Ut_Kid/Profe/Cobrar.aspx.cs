@@ -13,6 +13,8 @@ namespace Ut_Kid.Profe
         ControllerProfesor context = new ControllerProfesor();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["id"] == null)
+                Response.Redirect("../Login.aspx");
             txtCantidad.Enabled = false;
         }
 

@@ -27,7 +27,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br/>
     <br/>
-    <h1>Bienvenido <asp:Label ID="txtUser" Text="User" runat="server" /></h1>
+    <h1>Bienvenido <asp:Label ID="lblUser" Text="User" runat="server" ForeColor="#003399" /></h1>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="MainContent" runat="server">
     <label class="text-info">En la parte superior tienes tu menu de opciones</label>

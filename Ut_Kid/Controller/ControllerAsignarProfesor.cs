@@ -29,7 +29,7 @@ namespace Controller
             return contexto.TblTallers.ToList<TblTaller>();
         }
 
-        public bool InsertarAsigProfe(TblAsignacionProfesor _TBL_ASIGTALLLER)
+        public bool InsertarAsigProfe(TblAsignacionProfesor  _TBL_ASIGTALLLER)
         {
             bool respuesta = false;
             try

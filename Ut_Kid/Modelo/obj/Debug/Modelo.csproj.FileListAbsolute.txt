@@ -24,3 +24,9 @@ C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Modelo\obj\Debug\Modelo.csprojAssembly
 C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
 C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Modelo\obj\Debug\Modelo.dll
 C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Modelo\bin\Debug\Modelo.dll
+C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Modelo\obj\Debug\Modelo.dll
+C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Modelo\obj\Debug\Modelo.pdb

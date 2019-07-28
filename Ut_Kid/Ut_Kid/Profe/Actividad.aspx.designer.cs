@@ -22,6 +22,15 @@ namespace Ut_Kid.Profe {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divEditar;
         
         /// <summary>
+        /// txtActualizarId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtActualizarId;
+        
+        /// <summary>
         /// ddlActualizarTaller control.
         /// </summary>
         /// <remarks>
@@ -49,31 +58,31 @@ namespace Ut_Kid.Profe {
         protected global::System.Web.UI.WebControls.TextBox txtActualizarDescripcion;
         
         /// <summary>
-        /// Button2 control.
+        /// btnActualizar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button btnActualizar;
         
         /// <summary>
-        /// Button4 control.
+        /// btnCancelar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button4;
+        protected global::System.Web.UI.WebControls.Button btnCancelar;
         
         /// <summary>
-        /// divCrear control.
+        /// divDdl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCrear;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divDdl;
         
         /// <summary>
         /// ddlTalleres control.
@@ -83,6 +92,15 @@ namespace Ut_Kid.Profe {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlTalleres;
+        
+        /// <summary>
+        /// divCrear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCrear;
         
         /// <summary>
         /// txtActividad control.
@@ -103,22 +121,22 @@ namespace Ut_Kid.Profe {
         protected global::System.Web.UI.WebControls.TextBox txtdescripcion;
         
         /// <summary>
-        /// lblMensaje control.
+        /// btnCrear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensaje;
+        protected global::System.Web.UI.WebControls.Button btnCrear;
         
         /// <summary>
-        /// Button1 control.
+        /// btnCancelar3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnCancelar3;
         
         /// <summary>
         /// divEliminar control.
@@ -128,6 +146,15 @@ namespace Ut_Kid.Profe {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divEliminar;
+        
+        /// <summary>
+        /// txtEliminarId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEliminarId;
         
         /// <summary>
         /// lblEliminarTaller control.
@@ -166,22 +193,22 @@ namespace Ut_Kid.Profe {
         protected global::System.Web.UI.WebControls.Label lblEliminarMensage;
         
         /// <summary>
-        /// Button3 control.
+        /// btnEliminar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.Button btnEliminar;
         
         /// <summary>
-        /// Button5 control.
+        /// btnCancelar2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button5;
+        protected global::System.Web.UI.WebControls.Button btnCancelar2;
         
         /// <summary>
         /// divGrid control.
@@ -191,6 +218,15 @@ namespace Ut_Kid.Profe {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divGrid;
+        
+        /// <summary>
+        /// btnNuevo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnNuevo;
         
         /// <summary>
         /// lblmsgGeneral control.

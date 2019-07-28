@@ -30,57 +30,69 @@
     <h3 class="text-info">Control de las actividades por taller</h3>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="MainContent" runat="server">
+   
     <div ID="divEditar" runat="server">
-        
+        <asp:TextBox ID="txtActualizarId" runat="server" Visible="false" Enabled="false" />
         Taller<asp:DropDownList ID="ddlActualizarTaller" runat="server" CssClass="form-control"></asp:DropDownList>
         Actividad<asp:TextBox ID="txtActualizarNombre" runat="server" CssClass="form-control"></asp:TextBox><br/>
         Desripción<asp:TextBox ID="txtActualizarDescripcion" runat="server" CssClass="form-control"></asp:TextBox><br/>
         <br />
-        <asp:Button ID="Button2" runat="server" onClick="Button2_Click" Text="Actualizar" CssClass="btn btn-primary btn-success" />
+        <asp:Button ID="btnActualizar" OnClick="btnActualizar_Click" runat="server" Text="Actualizar" CssClass="btn btn-primary btn-success" />
         <br />
         <br />
-        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Cancelar" CssClass="btn btn-primary btn-success" />
+        <asp:Button ID="btnCancelar" OnClick="btnCancelar_Click" runat="server" Text="Cancelar" CssClass="btn btn-primary btn-success" />
         <br />
+    </div>
+    <div id="divDdl" runat="server">
+        Taller<asp:DropDownList ID="ddlTalleres" OnSelectedIndexChanged="ddlTalleres_SelectedIndexChanged" runat="server" CssClass="form-control" AutoPostBack="True"></asp:DropDownList>    
     </div>
     <div id="divCrear" runat="server">
-        Taller<asp:DropDownList ID="ddlTalleres" OnSelectedIndexChanged="ddlTalleres_SelectedIndexChanged" runat="server" CssClass="form-control" AutoPostBack="True"></asp:DropDownList>
         Actividad<asp:TextBox ID="txtActividad" runat="server" CssClass="form-control"></asp:TextBox><br/>
         Desripción<asp:TextBox ID="txtdescripcion" runat="server" CssClass="form-control"></asp:TextBox><br/>
-        <asp:Label ID="lblMensaje" Text="" runat="server" />
         <br />
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Guardar" CssClass="btn btn-primary btn-success" /><br/>
+        <asp:Button ID="btnCrear" OnClick="btnCrear_Click1" runat="server" Text="Guardar" CssClass="btn btn-primary btn-success" /><br/>
+        <br />
+        <br />
+        <asp:Button ID="btnCancelar3" OnClick="btnCancelar_Click" runat="server" Text="Cancelar" CssClass="btn btn-primary btn-success" />
+        <br />
     </div>
     <div ID="divEliminar" runat="server">
+        <asp:TextBox ID="txtEliminarId" runat="server" Visible="false" Enabled="false" />
         Taller<asp:Label ID="lblEliminarTaller" Text="" runat="server" CssClass="help-block" />
         Actividad<asp:Label ID="lblEliminarNombre" Text="" runat="server" CssClass="help-block" />
         Desripción<asp:Label ID="lblEliminarDescripcion" Text="" runat="server" CssClass="help-block" />
         <asp:Label ID="lblEliminarMensage" Text="¿Eliminar Registro?" runat="server" ForeColor="#CC0000" />
         <br />
-        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click"  Text="Eliminar" CssClass="btn btn-primary btn-success" /><br/><br />
-        <asp:Button ID="Button5" runat="server"  OnClick="Button5_Click" Text="Cancelar" CssClass="btn btn-primary btn-success" /><br/>
+        <asp:Button ID="btnEliminar" OnClick="btnEliminar_Click" runat="server" Text="Eliminar" CssClass="btn btn-primary btn-success" /><br/><br />
+        <asp:Button ID="btnCancelar2" OnClick="btnCancelar_Click" runat="server" Text="Cancelar" CssClass="btn btn-primary btn-success" /><br/>
     </div>
     <div ID="divGrid" runat="server">
+        <asp:Button ID="btnNuevo" OnClick="btnNuevo_Click" Text="Nuevo" runat="server" CssClass="btn btn-primary btn-success" /><br />
         <asp:Label ID="lblmsgGeneral" Text="" runat="server" />
-        <asp:GridView ID="gvActividades" AutoGenerateColumns="False" runat="server" OnRowDeleted="gvActividades_RowDeleted" OnRowDeleting="gvActividades_RowDeleting" CssClass="table color-table table-striped table-responsive " OnSelectedIndexChanged="gvActividades_SelectedIndexChanged" >
+        <asp:GridView ID="gvActividades" AutoGenerateColumns="False" runat="server" CssClass="table color-table table-striped table-responsive " CellPadding="4" 
+            ForeColor="#333333" GridLines="None" OnRowCommand="gvActividades_RowCommand"
+             OnRowEditing="gvActividades_RowEditing"  OnRowDeleting="gvActividades_RowDeleting">
+            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
-                <asp:BoundField DataField="id" HeaderText="id" /> 
+                <asp:BoundField DataField="id" HeaderText="ID" /> 
                 <asp:BoundField DataField="idTaller" HeaderText="idTaller" /> 
-                <%--<asp:TemplateField>
-                    <ItemTemplate>
-                        <asp:HiddenField ID="hidId" runat="server" Value='<%#DataBinder.Eval(Container.DataItem,"id") %>' />
-                    </ItemTemplate>
-                </asp:TemplateField>
-                <asp:TemplateField>
-                    <ItemTemplate>
-                        <asp:HiddenField ID="hidIdTaller" runat="server" Value='<%#DataBinder.Eval(Container.DataItem,"idTaller") %>' />
-                    </ItemTemplate>
-                </asp:TemplateField>--%>
                 <asp:BoundField DataField="strNombre" HeaderText="Taller" />  
                 <asp:BoundField DataField="strvalor" HeaderText="Actividad" />  
-                <asp:BoundField DataField="strdescripcion" HeaderText="Descripcion" />  
-                <asp:CommandField ShowSelectButton="true" SelectText="Editar" />
-                <asp:CommandField ShowDeleteButton="true" />
+                <asp:BoundField DataField="strdescripcion" HeaderText="Descripcion" />
+                <asp:CommandField ButtonType="Link" HeaderText="Acciones" ShowDeleteButton="true"  ShowEditButton="true" />
+                <%--<asp:CommandField ShowSelectButton="true" SelectText="Editar" />
+                <asp:CommandField ShowDeleteButton="true" />--%>
             </Columns>
+            <EditRowStyle BackColor="#999999" />
+            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#E9E7E2" />
+            <SortedAscendingHeaderStyle BackColor="#506C8C" />
+            <SortedDescendingCellStyle BackColor="#FFFDF8" />
+            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
             </asp:GridView>
     </div>
     

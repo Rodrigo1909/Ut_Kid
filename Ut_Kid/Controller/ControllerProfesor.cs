@@ -31,6 +31,11 @@ namespace Controller
             return respuesta;
 
         }
+        
+        public TblProfesor verProfesorPorId(int id)
+        {
+            return contexto.TblProfesors.Where(p => p.id == id).FirstOrDefault();
+        }
         public TblNino validarNino(int id)
         {
             return contexto.TblNinos.Where(n=>n.id==id).FirstOrDefault();
@@ -125,7 +130,7 @@ namespace Controller
             }
 
         }
-        public decimal verSaldo(int id)
+        public decimal? verSaldo(int id)
         {
             return contexto.TblModederoNinos.Where(i => i.id == id).FirstOrDefault().cantidad;
         }
