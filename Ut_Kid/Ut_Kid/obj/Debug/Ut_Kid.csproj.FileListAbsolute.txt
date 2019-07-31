@@ -285,18 +285,17 @@ C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Ut_Kid\obj\Debug\Ut_Kid.csproj.CoreCom
 C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Ut_Kid\obj\Debug\Ut_Kid.csproj.CopyComplete
 C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Ut_Kid\obj\Debug\Ut_Kid.dll
 C:\Users\adido\Desktop\repo\Ut_Kid\Ut_Kid\Ut_Kid\obj\Debug\Ut_Kid.pdb
-C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\obj\Debug\Ut_Kid.csprojResolveAssemblyReference.cache
+C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\bin\roslyn\VBCSCompiler.exe
 C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\bin\roslyn\csc.exe
 C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\bin\roslyn\Microsoft.CSharp.Core.targets
 C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\bin\roslyn\Microsoft.VisualBasic.Core.targets
 C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\bin\roslyn\System.Collections.Immutable.dll
 C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\bin\roslyn\System.Reflection.Metadata.dll
 C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\bin\roslyn\vbc.exe
-C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\bin\roslyn\VBCSCompiler.exe
 C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\bin\Ut_Kid.dll.config
 C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\bin\Ut_Kid.dll
@@ -354,6 +353,7 @@ C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\bin\Microsoft
 C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\obj\Debug\Ut_Kid.csprojResolveAssemblyReference.cache
 C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\obj\Debug\Ut_Kid.dll
 C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Ut_Kid\obj\Debug\Ut_Kid.pdb
 C:\Users\adido\Desktop\repoII\Ut_Kid\Ut_Kid\Ut_Kid\bin\roslyn\csc.exe

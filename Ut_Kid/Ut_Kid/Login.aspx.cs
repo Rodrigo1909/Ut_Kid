@@ -44,8 +44,13 @@ namespace Ut_Kid
             ControllerAutenticacion ctrlAutenticacion = new ControllerAutenticacion();
             TblUser UsuarioLoggeado = ctrlAutenticacion.ValidarLogin(usuario);
             
+<<<<<<< Updated upstream
           
            
+=======
+            
+            
+>>>>>>> Stashed changes
             if (UsuarioLoggeado != null)
             {
               // 
@@ -53,19 +58,31 @@ namespace Ut_Kid
           
                 if (UsuarioLoggeado.strtipoUsuario == "PADRE")
                 {
+<<<<<<< Updated upstream
                     var padre = (from pa in contexto.TblPadre where pa.idUser == UsuarioLoggeado.id select pa).FirstOrDefault();
                     Session["id"] = padre.id;
+=======
+                    var padre = (from pa in contexto.TblPadres where pa.idUser == UsuarioLoggeado.id select pa).FirstOrDefault();
+>>>>>>> Stashed changes
                     Response.Redirect("./Padre/RegistrarHijo.aspx", true);
                 }
                 else if (UsuarioLoggeado.strtipoUsuario == "PROFESOR")
                 {
+<<<<<<< Updated upstream
                     var profe = (from pa in contexto.TblProfesor where pa.idUser == UsuarioLoggeado.id select pa).FirstOrDefault();
+=======
+                    var profe = (from pa in contexto.TblProfesors where pa.idUser == UsuarioLoggeado.id select pa).FirstOrDefault();
+>>>>>>> Stashed changes
                     Session["id"] = profe.id;
                     Response.Redirect("./Profe/Inicio.aspx", true);
                 }
                 else if (UsuarioLoggeado.strtipoUsuario == "NINO")
                 {
+<<<<<<< Updated upstream
                     var nino = (from pa in contexto.TblNino where pa.idUser == UsuarioLoggeado.id select pa).FirstOrDefault();
+=======
+                    var nino = (from pa in contexto.TblNinos where pa.idUser == UsuarioLoggeado.id select pa).FirstOrDefault();
+>>>>>>> Stashed changes
                     Session["nino"] = UsuarioLoggeado.strusuario;
                     Response.Redirect("Nino/InicioNino.aspx", true);
                 }

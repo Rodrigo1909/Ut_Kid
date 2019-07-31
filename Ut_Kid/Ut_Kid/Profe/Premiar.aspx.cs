@@ -39,7 +39,7 @@ namespace Ut_Kid.Profe
             var nino = context.validarNino(Convert.ToInt32(txtClave.Text));
             if (nino != null)
             {
-                lblCantidad.Text = "$" + context.verSaldo(Convert.ToInt32(txtClave.Text));
+                lblCantidad.Text = "$" + context.verSaldo(nino.id);
                 lblDatos.Text = nino.strNombre + " " +
                     nino.strApellidoP + " " +
                     nino.strApellidoM;

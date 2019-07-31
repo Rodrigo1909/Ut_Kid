@@ -104,8 +104,13 @@ namespace Controller
         {
             try
             {
+<<<<<<< Updated upstream
                 var monedero = contexto.TblModederoNino.Where(m => m.idNino == id).FirstOrDefault();
                 monedero.cantidad = monedero.cantidad + cantidad;
+=======
+                var monedero = contexto.TblNinos.Where(m => m.id == id).FirstOrDefault();
+                monedero.saldo_dinero = monedero.saldo_dinero + cantidad;
+>>>>>>> Stashed changes
                 contexto.SubmitChanges();
                 return true;
             }
@@ -119,8 +124,13 @@ namespace Controller
         {
             try
             {
+<<<<<<< Updated upstream
                 var monedero = contexto.TblModederoNino.Where(m => m.idNino == id).FirstOrDefault();
                 monedero.cantidad = monedero.cantidad - cantidad;
+=======
+                var monedero = contexto.TblNinos.Where(m => m.id == id).FirstOrDefault();
+                monedero.saldo_dinero = monedero.saldo_dinero - cantidad;
+>>>>>>> Stashed changes
                 contexto.SubmitChanges();
                 return true;
             }
@@ -130,9 +140,13 @@ namespace Controller
             }
 
         }
-        public decimal? verSaldo(int id)
+        public decimal verSaldo(int id)
         {
+<<<<<<< Updated upstream
             return contexto.TblModederoNino.Where(i => i.id == id).FirstOrDefault().cantidad;
+=======
+            return contexto.TblNinos.Where(i => i.id == id).FirstOrDefault().saldo_dinero;
+>>>>>>> Stashed changes
         }
     }
 }

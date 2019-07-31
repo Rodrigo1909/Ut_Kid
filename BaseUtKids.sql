@@ -69,6 +69,7 @@ strApellidoM varchar(200),
 intEdad	int,
 strSexo	varchar(200),
 strAlergia	varchar(500),
+saldo_dinero decimal(10,2) not null,
 idPadre	int,
 idUser	int,
 idTaller int,
@@ -115,14 +116,6 @@ idAsignacionProfesor int,
 constraint pk_AsignacionNino primary key (Id),
 constraint fkIdNino_AsigNino foreign key(idNino) references TblNino(id),
 constraint fkIdAsignacionProfesor_AsigNino foreign key(idAsignacionProfesor) references TblAsignacionProfesor(id)
-);
-
-create table TblModederoNino(
-id int not null identity(1,1),
-idNino int,
-cantidad decimal(10,2),
-constraint pk_Monedero primary key (Id),
-constraint fkIdModenero_Nino foreign key(idNino) references TblNino(id)
 );
 
 create table TblActividadTaller(

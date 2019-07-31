@@ -66,6 +66,7 @@ namespace Ut_Kid.Padre
             nino.strSexo = txtSexo.Text.ToUpper();
             nino.strAlergia = txtAlergia.Text.ToUpper();
             nino.idPadre = Int32.Parse(lbPadre.Text);
+            nino.saldo_dinero = 50;
             ControllerHijo ctrlNino = new ControllerHijo();
             ctrlNino.InsertarHijo(GetDatosVista(nino));
             this.Response.Redirect("./RegistrarHijo.aspx", true);

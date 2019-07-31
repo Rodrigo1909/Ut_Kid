@@ -42,9 +42,6 @@ namespace Modelo
     partial void InsertTblDireccion(TblDireccion instance);
     partial void UpdateTblDireccion(TblDireccion instance);
     partial void DeleteTblDireccion(TblDireccion instance);
-    partial void InsertTblModederoNino(TblModederoNino instance);
-    partial void UpdateTblModederoNino(TblModederoNino instance);
-    partial void DeleteTblModederoNino(TblModederoNino instance);
     partial void InsertTblNino(TblNino instance);
     partial void UpdateTblNino(TblNino instance);
     partial void DeleteTblNino(TblNino instance);
@@ -127,6 +124,7 @@ namespace Modelo
 			}
 		}
 		
+<<<<<<< Updated upstream
 		public System.Data.Linq.Table<TblModederoNino> TblModederoNino
 		{
 			get
@@ -136,6 +134,9 @@ namespace Modelo
 		}
 		
 		public System.Data.Linq.Table<TblNino> TblNino
+=======
+		public System.Data.Linq.Table<TblNino> TblNinos
+>>>>>>> Stashed changes
 		{
 			get
 			{
@@ -1081,6 +1082,7 @@ namespace Modelo
 		}
 	}
 	
+<<<<<<< Updated upstream
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TblModederoNino")]
 	public partial class TblModederoNino : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1232,6 +1234,8 @@ namespace Modelo
 		}
 	}
 	
+=======
+>>>>>>> Stashed changes
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TblNino")]
 	public partial class TblNino : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1252,6 +1256,8 @@ namespace Modelo
 		
 		private string _strAlergia;
 		
+		private decimal _saldo_dinero;
+		
 		private System.Nullable<int> _idPadre;
 		
 		private System.Nullable<int> _idUser;
@@ -1260,15 +1266,23 @@ namespace Modelo
 		
 		private EntitySet<TblAsignacionNino> _TblAsignacionNino;
 		
+<<<<<<< Updated upstream
 		private EntitySet<TblModederoNino> _TblModederoNino;
+=======
+		private EntityRef<TblUser> _TblUser;
+>>>>>>> Stashed changes
 		
 		private EntityRef<TblPadre> _TblPadre;
 		
 		private EntityRef<TblTaller> _TblTaller;
 		
+<<<<<<< Updated upstream
 		private EntityRef<TblUser> _TblUser;
 		
     #region Definiciones de métodos de extensibilidad
+=======
+    #region Extensibility Method Definitions
+>>>>>>> Stashed changes
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
@@ -1286,6 +1300,8 @@ namespace Modelo
     partial void OnstrSexoChanged();
     partial void OnstrAlergiaChanging(string value);
     partial void OnstrAlergiaChanged();
+    partial void Onsaldo_dineroChanging(decimal value);
+    partial void Onsaldo_dineroChanged();
     partial void OnidPadreChanging(System.Nullable<int> value);
     partial void OnidPadreChanged();
     partial void OnidUserChanging(System.Nullable<int> value);
@@ -1296,11 +1312,18 @@ namespace Modelo
 		
 		public TblNino()
 		{
+<<<<<<< Updated upstream
 			this._TblAsignacionNino = new EntitySet<TblAsignacionNino>(new Action<TblAsignacionNino>(this.attach_TblAsignacionNino), new Action<TblAsignacionNino>(this.detach_TblAsignacionNino));
 			this._TblModederoNino = new EntitySet<TblModederoNino>(new Action<TblModederoNino>(this.attach_TblModederoNino), new Action<TblModederoNino>(this.detach_TblModederoNino));
 			this._TblPadre = default(EntityRef<TblPadre>);
 			this._TblTaller = default(EntityRef<TblTaller>);
 			this._TblUser = default(EntityRef<TblUser>);
+=======
+			this._TblAsignacionNinos = new EntitySet<TblAsignacionNino>(new Action<TblAsignacionNino>(this.attach_TblAsignacionNinos), new Action<TblAsignacionNino>(this.detach_TblAsignacionNinos));
+			this._TblUser = default(EntityRef<TblUser>);
+			this._TblPadre = default(EntityRef<TblPadre>);
+			this._TblTaller = default(EntityRef<TblTaller>);
+>>>>>>> Stashed changes
 			OnCreated();
 		}
 		
@@ -1444,6 +1467,26 @@ namespace Modelo
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_saldo_dinero", DbType="Decimal(10,2) NOT NULL")]
+		public decimal saldo_dinero
+		{
+			get
+			{
+				return this._saldo_dinero;
+			}
+			set
+			{
+				if ((this._saldo_dinero != value))
+				{
+					this.Onsaldo_dineroChanging(value);
+					this.SendPropertyChanging();
+					this._saldo_dinero = value;
+					this.SendPropertyChanged("saldo_dinero");
+					this.Onsaldo_dineroChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idPadre", DbType="Int")]
 		public System.Nullable<int> idPadre
 		{
@@ -1529,6 +1572,7 @@ namespace Modelo
 			}
 		}
 		
+<<<<<<< Updated upstream
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblNino_TblModederoNino", Storage="_TblModederoNino", ThisKey="id", OtherKey="idNino")]
 		public EntitySet<TblModederoNino> TblModederoNino
 		{
@@ -1544,6 +1588,10 @@ namespace Modelo
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblPadre_TblNino", Storage="_TblPadre", ThisKey="idPadre", OtherKey="id", IsForeignKey=true)]
 		public TblPadre TblPadre
+=======
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblUser_TblNino", Storage="_TblUser", ThisKey="idUser", OtherKey="id", IsForeignKey=true)]
+		public TblUser TblUser
+>>>>>>> Stashed changes
 		{
 			get
 			{
@@ -1644,6 +1692,40 @@ namespace Modelo
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblTaller_TblNino", Storage="_TblTaller", ThisKey="idTaller", OtherKey="id", IsForeignKey=true)]
+		public TblTaller TblTaller
+		{
+			get
+			{
+				return this._TblTaller.Entity;
+			}
+			set
+			{
+				TblTaller previousValue = this._TblTaller.Entity;
+				if (((previousValue != value) 
+							|| (this._TblTaller.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TblTaller.Entity = null;
+						previousValue.TblNinos.Remove(this);
+					}
+					this._TblTaller.Entity = value;
+					if ((value != null))
+					{
+						value.TblNinos.Add(this);
+						this._idTaller = value.id;
+					}
+					else
+					{
+						this._idTaller = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("TblTaller");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1675,6 +1757,7 @@ namespace Modelo
 			this.SendPropertyChanging();
 			entity.TblNino = null;
 		}
+<<<<<<< Updated upstream
 		
 		private void attach_TblModederoNino(TblModederoNino entity)
 		{
@@ -1687,6 +1770,8 @@ namespace Modelo
 			this.SendPropertyChanging();
 			entity.TblNino = null;
 		}
+=======
+>>>>>>> Stashed changes
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TblPadre")]
@@ -2702,7 +2787,13 @@ namespace Modelo
 		
 		private EntitySet<TblAsignacionProfesor> _TblAsignacionProfesor;
 		
+<<<<<<< Updated upstream
 		private EntitySet<TblNino> _TblNino;
+=======
+		private EntitySet<TblNino> _TblNinos;
+		
+		private EntitySet<TblProfesor> _TblProfesors;
+>>>>>>> Stashed changes
 		
 		private EntitySet<TblProfesor> _TblProfesor;
 		
@@ -2722,10 +2813,17 @@ namespace Modelo
 		
 		public TblTaller()
 		{
+<<<<<<< Updated upstream
 			this._TblActividadTaller = new EntitySet<TblActividadTaller>(new Action<TblActividadTaller>(this.attach_TblActividadTaller), new Action<TblActividadTaller>(this.detach_TblActividadTaller));
 			this._TblAsignacionProfesor = new EntitySet<TblAsignacionProfesor>(new Action<TblAsignacionProfesor>(this.attach_TblAsignacionProfesor), new Action<TblAsignacionProfesor>(this.detach_TblAsignacionProfesor));
 			this._TblNino = new EntitySet<TblNino>(new Action<TblNino>(this.attach_TblNino), new Action<TblNino>(this.detach_TblNino));
 			this._TblProfesor = new EntitySet<TblProfesor>(new Action<TblProfesor>(this.attach_TblProfesor), new Action<TblProfesor>(this.detach_TblProfesor));
+=======
+			this._TblActividadTallers = new EntitySet<TblActividadTaller>(new Action<TblActividadTaller>(this.attach_TblActividadTallers), new Action<TblActividadTaller>(this.detach_TblActividadTallers));
+			this._TblAsignacionProfesors = new EntitySet<TblAsignacionProfesor>(new Action<TblAsignacionProfesor>(this.attach_TblAsignacionProfesors), new Action<TblAsignacionProfesor>(this.detach_TblAsignacionProfesors));
+			this._TblNinos = new EntitySet<TblNino>(new Action<TblNino>(this.attach_TblNinos), new Action<TblNino>(this.detach_TblNinos));
+			this._TblProfesors = new EntitySet<TblProfesor>(new Action<TblProfesor>(this.attach_TblProfesors), new Action<TblProfesor>(this.detach_TblProfesors));
+>>>>>>> Stashed changes
 			OnCreated();
 		}
 		
@@ -2848,8 +2946,26 @@ namespace Modelo
 			}
 		}
 		
+<<<<<<< Updated upstream
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblTaller_TblProfesor", Storage="_TblProfesor", ThisKey="id", OtherKey="idTaller")]
 		public EntitySet<TblProfesor> TblProfesor
+=======
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblTaller_TblNino", Storage="_TblNinos", ThisKey="id", OtherKey="idTaller")]
+		public EntitySet<TblNino> TblNinos
+		{
+			get
+			{
+				return this._TblNinos;
+			}
+			set
+			{
+				this._TblNinos.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TblTaller_TblProfesor", Storage="_TblProfesors", ThisKey="id", OtherKey="idTaller")]
+		public EntitySet<TblProfesor> TblProfesors
+>>>>>>> Stashed changes
 		{
 			get
 			{
@@ -2905,7 +3021,23 @@ namespace Modelo
 			entity.TblTaller = null;
 		}
 		
+<<<<<<< Updated upstream
 		private void attach_TblNino(TblNino entity)
+=======
+		private void attach_TblNinos(TblNino entity)
+		{
+			this.SendPropertyChanging();
+			entity.TblTaller = this;
+		}
+		
+		private void detach_TblNinos(TblNino entity)
+		{
+			this.SendPropertyChanging();
+			entity.TblTaller = null;
+		}
+		
+		private void attach_TblProfesors(TblProfesor entity)
+>>>>>>> Stashed changes
 		{
 			this.SendPropertyChanging();
 			entity.TblTaller = this;
