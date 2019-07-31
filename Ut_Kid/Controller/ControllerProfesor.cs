@@ -17,7 +17,7 @@ namespace Controller
             bool respuesta = false;
             try
             {
-                contexto.TblProfesors.InsertOnSubmit(_TBL_Profe);
+                contexto.TblProfesor.InsertOnSubmit(_TBL_Profe);
                 contexto.SubmitChanges();
                 respuesta = true;
 
@@ -34,33 +34,33 @@ namespace Controller
         
         public TblProfesor verProfesorPorId(int id)
         {
-            return contexto.TblProfesors.Where(p => p.id == id).FirstOrDefault();
+            return contexto.TblProfesor.Where(p => p.id == id).FirstOrDefault();
         }
         public TblNino validarNino(int id)
         {
-            return contexto.TblNinos.Where(n=>n.id==id).FirstOrDefault();
+            return contexto.TblNino.Where(n=>n.id==id).FirstOrDefault();
         }
         public List<TblTaller> verTalleres()
         {
-            return contexto.TblTallers.ToList();
+            return contexto.TblTaller.ToList();
         }
         public List<TblActividadTaller> verActividades(int idTaller)
         {
-            return contexto.TblActividadTallers.Where(i=>i.idTaller==idTaller).ToList();
+            return contexto.TblActividadTaller.Where(i=>i.idTaller==idTaller).ToList();
         }
         public TblActividadTaller verActividadPorId(int id)
         {
-            return contexto.TblActividadTallers.Where(a => a.id == id).FirstOrDefault();
+            return contexto.TblActividadTaller.Where(a => a.id == id).FirstOrDefault();
         }
         public TblTaller verTallerPorId(int id)
         {
-            return contexto.TblTallers.Where(i => i.id == id).FirstOrDefault();
+            return contexto.TblTaller.Where(i => i.id == id).FirstOrDefault();
         }
         public bool actualizarActividad(TblActividadTaller actividad)
         {
             try
             {
-                var item = contexto.TblActividadTallers.Where(i => i.id == actividad.id).FirstOrDefault();
+                var item = contexto.TblActividadTaller.Where(i => i.id == actividad.id).FirstOrDefault();
                 item.idTaller = actividad.idTaller;
                 item.strvalor = actividad.strvalor;
                 item.strdescripcion = actividad.strdescripcion;
@@ -77,8 +77,8 @@ namespace Controller
         {
             try
             {
-                var item = contexto.TblActividadTallers.Where(i => i.id == id).FirstOrDefault();
-                contexto.TblActividadTallers.DeleteOnSubmit(item);
+                var item = contexto.TblActividadTaller.Where(i => i.id == id).FirstOrDefault();
+                contexto.TblActividadTaller.DeleteOnSubmit(item);
                 contexto.SubmitChanges();
                 return true;
             }
@@ -91,7 +91,7 @@ namespace Controller
         {
             try
             {
-                contexto.TblActividadTallers.InsertOnSubmit(actividad);
+                contexto.TblActividadTaller.InsertOnSubmit(actividad);
                 contexto.SubmitChanges();
                 return true;
             }
@@ -104,7 +104,7 @@ namespace Controller
         {
             try
             {
-                var monedero = contexto.TblModederoNinos.Where(m => m.idNino == id).FirstOrDefault();
+                var monedero = contexto.TblModederoNino.Where(m => m.idNino == id).FirstOrDefault();
                 monedero.cantidad = monedero.cantidad + cantidad;
                 contexto.SubmitChanges();
                 return true;
@@ -119,7 +119,7 @@ namespace Controller
         {
             try
             {
-                var monedero = contexto.TblModederoNinos.Where(m => m.idNino == id).FirstOrDefault();
+                var monedero = contexto.TblModederoNino.Where(m => m.idNino == id).FirstOrDefault();
                 monedero.cantidad = monedero.cantidad - cantidad;
                 contexto.SubmitChanges();
                 return true;
@@ -132,7 +132,7 @@ namespace Controller
         }
         public decimal? verSaldo(int id)
         {
-            return contexto.TblModederoNinos.Where(i => i.id == id).FirstOrDefault().cantidad;
+            return contexto.TblModederoNino.Where(i => i.id == id).FirstOrDefault().cantidad;
         }
     }
 }

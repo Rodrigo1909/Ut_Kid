@@ -30,3 +30,10 @@ C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Modelo\bin\Debug\Mod
 C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
 C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Modelo\obj\Debug\Modelo.dll
 C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Modelo\obj\Debug\Modelo.pdb
+C:\Users\adido\Desktop\repoII\Ut_Kid\Ut_Kid\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\adido\Desktop\repoII\Ut_Kid\Ut_Kid\Modelo\bin\Debug\Modelo.dll
+C:\Users\adido\Desktop\repoII\Ut_Kid\Ut_Kid\Modelo\bin\Debug\Modelo.pdb
+C:\Users\adido\Desktop\repoII\Ut_Kid\Ut_Kid\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\adido\Desktop\repoII\Ut_Kid\Ut_Kid\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\adido\Desktop\repoII\Ut_Kid\Ut_Kid\Modelo\obj\Debug\Modelo.dll
+C:\Users\adido\Desktop\repoII\Ut_Kid\Ut_Kid\Modelo\obj\Debug\Modelo.pdb

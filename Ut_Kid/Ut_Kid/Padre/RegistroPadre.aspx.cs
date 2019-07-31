@@ -24,7 +24,7 @@ namespace Ut_Kid.Padre
 
         protected void btnRegistrarPadre_Click(object sender, EventArgs e)
         {
-            var exite = (from pa in contexto.TblUsers where pa.strusuario == txtUsuario.Text select pa).FirstOrDefault();
+            var exite = (from pa in contexto.TblUser where pa.strusuario == txtUsuario.Text select pa).FirstOrDefault();
             
 
             if (exite != null)

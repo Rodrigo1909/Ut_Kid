@@ -15,7 +15,7 @@ namespace Controller
 
         public object ConsultaProfesor()
         {
-            return contexto.TblProfesors
+            return contexto.TblProfesor
                 .Select(p => new
                 {
                     id = p.id,
@@ -26,7 +26,7 @@ namespace Controller
 
         public List<TblTaller> ConsultaTaller()
         {
-            return contexto.TblTallers.ToList<TblTaller>();
+            return contexto.TblTaller.ToList<TblTaller>();
         }
 
         public bool InsertarAsigProfe(TblAsignacionProfesor  _TBL_ASIGTALLLER)
@@ -34,7 +34,7 @@ namespace Controller
             bool respuesta = false;
             try
             {
-                contexto.TblAsignacionProfesors.InsertOnSubmit(_TBL_ASIGTALLLER);
+                contexto.TblAsignacionProfesor.InsertOnSubmit(_TBL_ASIGTALLLER);
                 contexto.SubmitChanges();
                 respuesta = true;
 

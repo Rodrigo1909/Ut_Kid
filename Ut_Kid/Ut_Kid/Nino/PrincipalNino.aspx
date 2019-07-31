@@ -41,9 +41,14 @@
          <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="LinqDataSource1" ForeColor="#333333" GridLines="None" Width="431px">
              <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
              <Columns>
-                 <asp:BoundField DataField="strvalor" HeaderText="Nombre de la actividad" ReadOnly="True" SortExpression="strvalor" />
-                 <asp:BoundField DataField="strdescripcion" HeaderText="Descripción" ReadOnly="True" SortExpression="strdescripcion" />
-                 <asp:BoundField DataField="idTaller" HeaderText="idTaller" ReadOnly="True" SortExpression="idTaller" Visible="False" />
+                 <asp:BoundField DataField="id" HeaderText="id" ReadOnly="True" SortExpression="id" />
+                 <asp:BoundField DataField="strNombre" HeaderText="strNombre" ReadOnly="True" SortExpression="strNombre" />
+                 <asp:BoundField DataField="strApellidoP" HeaderText="strApellidoP" ReadOnly="True" SortExpression="strApellidoP" />
+                 <asp:BoundField DataField="strApellidoM" HeaderText="strApellidoM" ReadOnly="True" SortExpression="strApellidoM" />
+                 <asp:BoundField DataField="intEdad" HeaderText="intEdad" ReadOnly="True" SortExpression="intEdad" />
+                 <asp:BoundField DataField="strSexo" HeaderText="strSexo" ReadOnly="True" SortExpression="strSexo" />
+                 <asp:BoundField DataField="strAlergia" HeaderText="strAlergia" ReadOnly="True" SortExpression="strAlergia" />
+                 <asp:BoundField DataField="TblModederoNino" HeaderText="Monedero" ReadOnly="True" SortExpression="TblModederoNino" />
              </Columns>
              <EditRowStyle BackColor="#999999" />
              <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -58,7 +63,7 @@
 
          </asp:GridView>
               </center>
-         <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="Modelo.UtBaseDatoDataContext" EntityTypeName="" Select="new (strvalor, strdescripcion, idTaller)" TableName="TblActividadTaller">
+         <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="Modelo.UtBaseDatoDataContext" EntityTypeName="" Select="new (id, strNombre, strApellidoP, strApellidoM, intEdad, strSexo, strAlergia, TblModederoNino)" TableName="TblNino">
          </asp:LinqDataSource>
           
     </div>

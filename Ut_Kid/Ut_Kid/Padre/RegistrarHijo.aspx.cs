@@ -32,7 +32,7 @@ namespace Ut_Kid.Padre
         {
             try
             {
-                GridView2.DataSource = contexto.TblNinos
+                GridView2.DataSource = contexto.TblNino
                     .Where(n => n.idPadre == idPadre)
                     .Select(n => new
                     {

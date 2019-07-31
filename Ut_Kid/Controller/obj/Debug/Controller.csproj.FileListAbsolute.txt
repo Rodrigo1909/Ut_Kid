@@ -41,3 +41,13 @@ C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Controller\bin\Debug
 C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
 C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Controller\obj\Debug\Controller.dll
 C:\Users\Luis Armando\Desktop\RecienteUt_kids\Ut_Kid\Ut_Kid\Controller\obj\Debug\Controller.pdb
+C:\Users\adido\Desktop\repoII\Ut_Kid\Ut_Kid\Controller\bin\Debug\Controller.dll
+C:\Users\adido\Desktop\repoII\Ut_Kid\Ut_Kid\Controller\bin\Debug\Controller.pdb
+C:\Users\adido\Desktop\repoII\Ut_Kid\Ut_Kid\Controller\bin\Debug\Modelo.dll
+C:\Users\adido\Desktop\repoII\Ut_Kid\Ut_Kid\Controller\bin\Debug\Modelo.pdb
+C:\Users\adido\Desktop\repoII\Ut_Kid\Ut_Kid\Controller\bin\Debug\Modelo.dll.config
+C:\Users\adido\Desktop\repoII\Ut_Kid\Ut_Kid\Controller\obj\Debug\Controller.csprojAssemblyReference.cache
+C:\Users\adido\Desktop\repoII\Ut_Kid\Ut_Kid\Controller\obj\Debug\Controller.csproj.CoreCompileInputs.cache
+C:\Users\adido\Desktop\repoII\Ut_Kid\Ut_Kid\Controller\obj\Debug\Controller.csproj.CopyComplete
+C:\Users\adido\Desktop\repoII\Ut_Kid\Ut_Kid\Controller\obj\Debug\Controller.dll
+C:\Users\adido\Desktop\repoII\Ut_Kid\Ut_Kid\Controller\obj\Debug\Controller.pdb
